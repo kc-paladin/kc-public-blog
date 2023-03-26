@@ -31,7 +31,7 @@ int main() {
 </details>
 
 ## Komentar
-- C++ mempunyai dua cara input. Yang pertama adalah `scanf` dan `printf` yang berasal dari C. Lalu, ada `cin` dan `cout` yang ditambahkan oleh C++. Namun, penulis lebih menyukasi `cin` dan `cout` dikarenakan simplisitasnya.
+- C++ mempunyai dua cara input. Yang pertama adalah `scanf` dan `printf` yang berasal dari C. Lalu, ada `cin` dan `cout` yang ditambahkan oleh C++. Namun, penulis lebih menyukai `cin` dan `cout` dikarenakan simplisitasnya.
     > _PENTING:_ `cin` dan `cout` lebih lambat dari `printf` dan `scanf` secara *default*. Gunakan perintah berikut jika tidak mencampurkan kedua jenis operator: `cin.tie(0);cout.tie(0);ios_base::sync_with_stdio(false);`.
 
 ## Materi Yang Berhubungan
