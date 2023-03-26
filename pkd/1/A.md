@@ -1,4 +1,4 @@
-# A. Seleksi Olimpiade
+# [A. Seleksi Olimpiade](https://tlx.toki.id/courses/competitive/chapters/01/problems/A)
 
 Author: Muhammad Hasan
 
