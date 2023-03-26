@@ -16,27 +16,21 @@ Kompleksitas Memori: $O(1)$
 ```c++
 #include <cstdio>
 
-int main()
-{
-    int N;
-    scanf("%d", &N);
-    for (int i = 1; i <= N; i++)
-    {
-        if (i % 10 == 0)
-        {
-            continue;
-        }
-        else if (i == 42)
-        {
-            printf("ERROR");
-            break;
-        }
-        printf("%d", i);
-        if (i < N)
-        {
-            printf("\n");
-        }
+int main() {
+  int N;
+  scanf("%d", &N);
+  for (int i = 1; i <= N; i++) {
+    if (i % 10 == 0) {
+      continue;
+    } else if (i == 42) {
+      printf("ERROR");
+      break;
     }
+    printf("%d", i);
+    if (i < N) {
+      printf("\n");
+    }
+  }
 }
 ```
 </details>
