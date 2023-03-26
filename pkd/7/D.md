@@ -4,7 +4,7 @@ Author: Ackhava Adam Malonda
 
 Soal ini dapat dikerjakan dengan DP(*dynamic programming*) *2-state*.
 
-Anggap $S[i]$ adalah karakter pada *index* ke-$i$ (zero-based), $L$ adalah panjang dari $S$, serta $L_{max}$ adalah nilai maksimal $L$ untuk semua kasus. Lalu, anggap $dp(x,y)$ adalah jawaban soal tersebut untuk *substring* $S[x],S[x+1],\ldots,S[y-1], S[y]$. Untuk memecahkan masalah ini menjadi *subproblem*, ada dua kasus:
+Anggap $S[i]$ adalah karakter pada *index* ke $i$ (zero-based), $L$ adalah panjang dari $S$, serta $L_{max}$ adalah nilai maksimal $L$ untuk semua kasus. Lalu, anggap $dp(x,y)$ adalah jawaban soal tersebut untuk *substring* $S[x],S[x+1],\ldots,S[y-1], S[y]$. Untuk memecahkan masalah ini menjadi *subproblem*, ada dua kasus:
 - $S[x]=S[y]$
 
     Dalam kasus ini, cara paling efektif untuk mendapat palindrom terpanjang adalah untuk mengambil kedua karakter secara sekaligus. Alhasil, jawabannya adalah $dp(x+1, y-1)+2$.
