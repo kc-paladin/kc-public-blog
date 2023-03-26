@@ -11,11 +11,11 @@ Algoritma utamanya sangat mirip (namun berbeda pada beberapa hal kecil), yakni s
     - Cek apakah $x$ habis dibagi $i$. Jika ya, maka tambahkan jumlah pembagi dengan 1. Hal ini guna untuk menghitung semua pembagi yang tidak lebih dari $\sqrt{x}$.
     - Perika apakah $\sqrt{x}=i$. Jika tidak, dan kondisi diatas terpenuhi, maka tambahkan jumlah pembagi dengan 1. Hal ini adalah untuk menghitung pembagi yang lebih dari $\sqrt{x}$.
 
-Untuk memeriksa kondisi yang melibatkan akar dari $x$, kuadratkan kedua sisi. Contohnya adalah $i<=\sqrt{x}$ menjadi $i^{2}<\sqrt{x}$.
+Untuk memeriksa kondisi yang melibatkan akar dari $x$, kuadratkan kedua sisi. Contohnya adalah $i\leq\sqrt{x}$ menjadi $i^{2}\leq\sqrt{x}$.
 
-Pada soal, bilangan "agak prima" memiliki tidak lebih dari 2 faktor selain bilangan itu sendiri dan 1. Sebagai hasilnya, jika 1 dan $x$ dihitung juga maka ada maksimal 4 faktor. Alhasil, jika jumlah pembagi lebih dari 4 cetak "TIDAK", dan selain itu cetak "YA".
+Pada soal, bilangan "agak prima" memiliki tidak lebih dari 2 faktor selain bilangan itu sendiri dan 1. Sebagai hasilnya, jika 1 dan $x$ dihitung juga maka ada maksimal 4 faktor. Alhasil, jika jumlah pembagi lebih dari 4 cetak `"TIDAK"`, dan selain itu cetak `"YA"`.
 
-Kompleksitas Waktu: $O(n*\sqrt{x_{max}})$
+Kompleksitas Waktu: $O(n\sqrt{x_{max}})$
 
 Kompleksitas Memori: $O(1)$
 
