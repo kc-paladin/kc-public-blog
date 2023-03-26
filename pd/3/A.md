@@ -30,7 +30,7 @@ int main() {
 
 ## Komentar
     
-- Dalam C++ terdapat metode lain dalam melakukan input/output yakni `scanf` atau `printf`, namun *author* lebih memilih menggunakan `cin` dan `cout` karena lebih *simple*.
+- Dalam C++ terdapat metode lain dalam melakukan input/output yakni `scanf` dan `printf`, namun *author* lebih memilih menggunakan `cin` dan `cout` karena lebih *simple*.
 - Karakter `\n` digunakan untuk membuat *new line*, ada cara lain pada C++, yakni dengan `endl`, namun `endl` membuat hasil eksekusi kode semakin lambat (baca blog pada materi yang berhubungan untuk detailnya)
 
 
