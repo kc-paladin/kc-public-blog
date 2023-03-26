@@ -28,6 +28,7 @@ Oleh karena itu, untuk mengatasi masalah ini, kita dapat melakukan hal berikut:
 - Iterasi setiap peserta dan periksa apakah peringkat peserta dengan $ID$ tersebut peringkatnya $\leq M$
 
 Kompleksitas Waktu: $O(N \log N)$
+
 Kompleksitas Memori: $O(N)$
 
 <details>
