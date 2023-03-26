@@ -76,7 +76,3 @@ int main() {
 
 ## Komentar
 - Meskipun `long long` digunakan dalam kasus ini, hal tersebut mungkin tidak mutlak diperlukan, mengingat batasan soal, dan `int` dapat memumpuni (penulis belum menguji ataupun memverifikasi hal tersebut, sehingga dapat dicoba oleh pembaca).
-
-## Materi Yang Berhubungan
-- [C++ If ... Else](https://www.w3schools.com/cpp/cpp_conditions.asp)
-- [Cin-Cout vs Scanf-Printf](https://www.geeksforgeeks.org/cincout-vs-scanfprintf/)
