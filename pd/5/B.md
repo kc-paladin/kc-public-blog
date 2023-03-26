@@ -35,6 +35,3 @@ int main() {
 
 ## Materi Yang Berhubungan
 - [C++ If ... Else](https://www.w3schools.com/cpp/cpp_conditions.asp)
-
-## Soal Yang Berhubungan
-- Mayoritas soal lain dari *course* yang sama di TLX mempunyai materi yang serupa
