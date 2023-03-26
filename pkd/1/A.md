@@ -91,7 +91,7 @@ int main() {
 ## Komentar
     
 - Ada banyak cara lain untuk menyimpan informasi skor peserta, diantaranya menggunakan `class` ataupun `tuple` dalam C++.
-- Cara lain dalam menyelesaikan soal ini adalah kita *check* untuk setiap peserta $i$ dan kita coba bandingkan dengan peserta lainnya, apabila terdapat $K$ peserta $j$ dengan $P_j<P_i$, maka kita bisa dapat bahwa peserta $i$ memiliki peringkat $K + 1$. Namun, cara ini memiliki kompleksitas waktu $O(N^2)$
+- Cara lain dalam menyelesaikan soal ini adalah kita check untuk setiap peserta $i$ dan kita coba bandingkan dengan peserta lainnya, apabila terdapat $K$ peserta $j$ dengan $P_j < P_i$, maka kita bisa dapat bahwa peserta $i$ memiliki peringkat $K + 1$. Namun, cara ini memiliki kompleksitas waktu $O(N^2)$
     
 ## Materi Yang Berhubungan
 
