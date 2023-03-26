@@ -10,7 +10,7 @@ Pada C++, sebuah fungsi dapat memanggil dirinya sendiri seperti saat memanggil f
 - Buat sebuah garis dengan panjang `N`
 - Jalankan `mountain` kembali untuk nilai `N-1`
 
-Kompleksitas Waktu: $O(N*2^{N})$
+Kompleksitas Waktu: $O(N\times 2^{N})$
 
 Kompleksitas Memori: $O(N)$ (dikarenakan *call stack*)
 
