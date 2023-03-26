@@ -6,7 +6,7 @@ Soal ini mendemonstrasikan cara mengaplikasikan *loop* dengan *break* dan *conti
 
 Dalam C++, kita dapat menggunakan *keyword* berupa `for`, `break`, dan `continue`.
 
-Kompleksitas Waktu: $O(min(N,42))$
+Kompleksitas Waktu: $O(\min(N,42))$
 
 Kompleksitas Memori: $O(1)$
 
