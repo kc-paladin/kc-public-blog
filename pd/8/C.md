@@ -1,4 +1,4 @@
-# [B. If Then](https://tlx.toki.id/courses/basic/chapters/05/problems/B)
+# [C. Bilangan Agak Prima](https://tlx.toki.id/courses/basic/chapters/08/problems/C)
 
 Author: Ackhava Adam Malonda
 
