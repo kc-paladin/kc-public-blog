@@ -2,13 +2,9 @@
 
 Author: I Nyoman Narayan Kitas Utama
 
-Ini adalah soal pengkodean ketiga di bab ke 10 pemrograman dasar yaitu [10. Subprogram](https://tlx.toki.id/courses/basic/chapters/10/lessons/A). Sangat disarankan untuk menguasai materi tentang faktorisasi prima (ya kan nama soalnya aja itu :p) dan sudah pernah mendapatkan _verdict_ **AC** (_Accepted_) di soal [B. Cek Bilangan Prima](https://tlx.toki.id/courses/basic/chapters/08/problems/B) (karena konsep dari solusi soal ini akan direferensikan banyak sekali di editorial ini) untuk memahami editorial yang akan diberikan.
+Ini adalah soal pengkodean ketiga di bab ke 10 pemrograman dasar yaitu [10. Subprogram](https://tlx.toki.id/courses/basic/chapters/10/lessons/A). Sangat disarankan untuk menguasai materi tentang faktorisasi prima (ya kan nama soalnya aja itu :p) untuk memahami editorial yang akan diberikan.
 
 Kalo masih belum ngerti tentang subprogram, _in a nutshell_ subprogram itu cara nyingkat suatu proses kalo proses ini mau dipanggil berulang kali (ato kalo misalnya lagi males ngetik awokwkwkwk). Nah, di editorial ini, akan diberikan 2 solusi yang akan menggunakan subprogram dalam implementasinya.
-
-![alasan mengapa subprogram itu superior](https://ibb.co/N1rWWPc)
-
-<!-- ![alasan mengapa subprogram itu superior](..\..\..\..\Donlod\drake-approves--disapproves.png) -->
 
 **Solusi A**. Perhatikan bahwa kita bisa ambil setiap prima dibawah $N$ kemudian cek satu per satu apakah prima tersebut habis membagi $N$. Kemudian, setelah kita bagi $N$ dengan prima tersebut, masukkan ke dalam faktorisasi prima, kemudian cek kembali apakah hasil baginya masih habis dibagi sama bilangan prima tersebut. Jika tidak, kita ganti primanya. Jika masih, ulangi langkah di atas sampai tidak habis dibagi. Formalnya, kita bisa mencari faktorisasi prima $N$ dengan cara mengecek setiap prima $p\leq N$ kemudian menentukan nilai $a$ maksimum agar $p^a$ habis membagi $N$.
 
@@ -28,7 +24,7 @@ Untuk optimisasi pengkodean solusi A, kita akan menggunakan lemma di bawah ini.
 
 **Lemma**. Untuk setiap bilangan asli $N>1$, pembagi bulat terkecil $N$ yang lebih dari $1$ pasti merupakan suatu bilangan prima.
 
-**Bukti**. Andaikan pembagi bulat terkecil tersebut bukanlah suatu bilangan prima. Misalkan pembagi ini adalah $B$. Maka, $B$ pasti habis dibagi suatu $P$ dimana $P$ merupakan bilangan prima. Ini berarti $P$ juga habis membagi $N$, padahal $P<B$. Jadi, pembagi bulat terkecil $N$ adalah suatu bilangan prima.
+**Bukti**. Andaikan pembagi bulat terkecil tersebut bukanlah suatu bilangan prima. Misalkan pembagi ini adalah $B$. Maka, $B$ pasti habis dibagi suatu $P$ dimana $P$ merupakan bilangan prima. Ini berarti $P$ juga habis membagi $N$, padahal $P < B$. Jadi, pembagi bulat terkecil $N$ adalah suatu bilangan prima.
 
 "Kok malah belajar pembuktian matematika? :/"
 
@@ -39,13 +35,11 @@ Terkadang kita harus mengetahui dan menggunakan beberapa trik matematika dan log
 
 Setelah mendapat nilai $a$, keluarkan `p^a` kemudian atur ulang nilai $a$ menjadi $0$. Karena nilai pertama $i$ yang membagi $N$ sudah pasti berupa bilangan prima, maka dijamin setelah tiap iterasi $i$, tidak ada bilangan asli $\leq i$ yang lebih dari $1$ yang habis membagi $N$. Untuk mempermudah penulisan kode, kita hanya perlu menulis subprogram bernama `pangkatTerbesar(i,N)` dengan metode _pass by reference_.
 
-Definisikan $K$ sebagai banyaknya faktor prima dari $N$.
+Kompleksitas Waktu Solusi A: $O(N)$
 
-Kompleksitas Waktu Solusi A: $O(N+\sum_{i=1}^K{a_i})$ dimana $a_i$ adalah pangkat dari faktor prima ke- $i$ dari $N$
+Kompleksitas Memori Solusi A: $O(\sigma_0(N)\sqrt{N}+K)$ dimana $\sigma_0(N)$ adalah banyak faktor berbeda dari $N$ dan $K$ sebagai banyaknya faktor prima dari $N$
 
-Kompleksitas Memori Solusi A: $O(\sigma_0(N)\sqrt{N}+K)$ dimana $\sigma_0(N)$ adalah banyak faktor berbeda dari $N$
-
-Kompleksitas Waktu Solusi B: $O(\sqrt{N}+\sum_{i=1}^K{a_i})$ dimana $a_i$ adalah pangkat dari faktor prima ke-$i$ dari $N$.
+Kompleksitas Waktu Solusi B: $O(\sqrt{N})$
 
 Kompleksitas Memori Solusi B: $O(1)$
 
@@ -170,5 +164,5 @@ int main()
 ## Materi Yang Berhubungan
     
 - [Faktorisasi Prima, KPK, dan FPB](https://www.kompas.com/skola/read/2023/03/14/153000569/cara-mencari-faktorisasi-prima-kpk-dan-fpb?page=all)
-- [_Passing Parameter_](https://socs.binus.ac.id/2018/12/05/passing-parameter/)
-- [Perbedaan _Pass by Value_ dan _Pass by Reference_](https://www.geeksforgeeks.org/difference-between-call-by-value-and-call-by-reference/)
+- [_Passing Parameter_ di C dan C++](https://socs.binus.ac.id/2018/12/05/passing-parameter/)
+- [Perbedaan _Pass by Value_ dan _Pass by Reference_ (English)](https://www.geeksforgeeks.org/difference-between-call-by-value-and-call-by-reference/)
