@@ -6,7 +6,7 @@ Soal ini mendemonstrasikan cara mengaplikasikan *loop* dengan *break* dan *conti
 
 Dalam C++, kita dapat menggunakan *keyword* berupa `for`, `break`, dan `continue`.
 
-Kompleksitas Waktu: $O(\min(N,42))$
+Kompleksitas Waktu: $O(N)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -36,7 +36,7 @@ int main() {
 </details>
 
 ## Komentar
-- Meskipun *loop* berjalan dari 1 sampai N, sebenarnya loop pasti akan berhenti pada angka 42 jika $N>42$. Hal ini karena penggunaan `break`.
+- Meskipun *loop* berjalan dari $1$ sampai $N$, sebenarnya loop pasti akan berhenti pada angka $42$ jika $N>42$. Hal ini karena penggunaan `break`.
 - C++ mempunyai dua cara input. Yang pertama adalah `scanf` dan `printf` yang berasal dari C. Lalu, ada `cin` dan `cout` yang ditambahkan oleh C++. Namun, penulis lebih menyukai `cin` dan `cout` dikarenakan simplisitasnya.
     > _PENTING:_ `cin` dan `cout` lebih lambat dari `printf` dan `scanf` secara *default*. Gunakan perintah berikut jika tidak mencampurkan kedua jenis operator: `cin.tie(0);cout.tie(0);ios_base::sync_with_stdio(false);`.
 
