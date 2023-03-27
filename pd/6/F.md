@@ -49,3 +49,4 @@ int main() {
     
 - [Modulo Operator in C++](https://www.geeksforgeeks.org/modulo-operator-in-c-cpp-with-examples/)
 - [Integer Factorization](https://cp-algorithms.com/algebra/factorization.html)
+- [Blog: Number of operation in 1 Second? - Codeforces](https://codeforces.com/blog/entry/80680)
