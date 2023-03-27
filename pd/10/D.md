@@ -16,6 +16,64 @@ Trik yang dapat dilakukan adalah dengan cara mengecek apakah $i$ membagi $N$ unt
 
 Untuk mempermudah penulisan kode, kita akan menulis subprogram bernama `pangkatTerbesar(i,N)` dengan metode _pass by value_ setiap kali $i$ muncul sebagai prima yang habis membagi $N$ dan `cekPrima(i)` untuk mengecek apakah $i$ itu prima.
 
+<details>
+    <summary>Kode Untuk Solusi A (C++ iostream library)</summary>
+
+```c++
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+bool cekPrima(int k) {
+  for (int i = 2; i <= sqrt(k + 1); i++) {
+    if (k % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+int pangkatTerbesar(long long k, long long n) {
+  int a = 0;
+  long long p = k;
+  while (n % p == 0) {
+    a++;
+    p *= k;
+  }
+  return a;
+}
+
+int main() {
+  int N, a;
+  cin >> N;
+  bool pertama = true;
+  for (int i = 2; i <= N; i++) {
+    if (N % i == 0) {
+      if (cekPrima(i)) {
+        a = pangkatTerbesar(i, N);
+        // mengkondisikan output
+        if (pertama) {
+          pertama = false;
+        } else {
+          cout << " x ";
+        }
+        cout << i;
+        if (a > 1) {
+          cout << "^" << a;
+        }
+      }
+    }
+  }
+  cout << endl;
+}
+```
+</details>
+    
+Kompleksitas Waktu Solusi A: $O(N)$
+
+Kompleksitas Memori Solusi A: $O(\sigma_0(N)\sqrt{N}+K)$ dimana $\sigma_0(N)$ adalah banyak faktor berbeda dari $N$ dan $K$ sebagai banyaknya faktor prima dari $N$
+
 **Solusi B (Optimisasi lebih jauh)**. Solusi yang satu ini akan menggunakan konsep pembuatan pohon faktor. Masih inget kan pohon faktor itu bagaimana? Bagi yang belum pernah belajar tentang ini (atau lupa :p), silahkan klik [di sini](https://www.zenius.net/blog/kpk-fpb-dengan-pohon-faktor) (ya emang sih itu link untuk cari KPK dan FPB tapi cara pembuatan pohonnya ada di sana kok). Singkatnya, kita cari faktor prima terkecil $N$, simpan prima tersebut, bagi $N$ dengan prima tersebut, dan terus lakukan ini sampai ketemu semua prima pembentuk $N$.
 
 "Kalo dalam pengkodean itu kayak gimana nulisnya?"
@@ -35,72 +93,6 @@ Terkadang kita harus mengetahui dan menggunakan beberapa trik matematika dan log
 
 Setelah mendapat nilai $a$, keluarkan `p^a` kemudian atur ulang nilai $a$ menjadi $0$. Karena nilai pertama $i$ yang membagi $N$ sudah pasti berupa bilangan prima, maka dijamin setelah tiap iterasi $i$, tidak ada bilangan asli $\leq i$ yang lebih dari $1$ yang habis membagi $N$. Untuk mempermudah penulisan kode, kita hanya perlu menulis subprogram bernama `pangkatTerbesar(i,N)` dengan metode _pass by reference_.
 
-Kompleksitas Waktu Solusi A: $O(N)$
-
-Kompleksitas Memori Solusi A: $O(\sigma_0(N)\sqrt{N}+K)$ dimana $\sigma_0(N)$ adalah banyak faktor berbeda dari $N$ dan $K$ sebagai banyaknya faktor prima dari $N$
-
-Kompleksitas Waktu Solusi B: $O(\sqrt{N})$
-
-Kompleksitas Memori Solusi B: $O(1)$
-
-<details>
-    <summary>Kode Untuk Solusi A (C++ iostream library)</summary>
-
-```c++
-#include <iostream>
-#include <cmath>
-
-using namespace std;
-
-bool cekPrima(int k)
-{
-    for (int i = 2; i <= sqrt(k + 1); i++) {
-        if (k % i == 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
-int pangkatTerbesar(long long k, long long n)
-{
-    int a = 0;
-    long long p = k;
-    while (n % p == 0) {
-        a++;
-        p *= k;
-    }
-    return a;
-}
-
-int main()
-{
-    int N, a;
-    cin >> N;
-    bool pertama = true;
-    for (int i = 2; i <= N; i++) {
-        if (N % i == 0) {
-            if (cekPrima(i)) {
-                a = pangkatTerbesar(i, N);
-                // mengkondisikan output
-                if (pertama) {
-                    pertama = false;
-                }
-                else {
-                    cout << " x ";
-                }
-                cout << i;
-                if (a > 1) {
-                    cout << "^" << a;
-                }
-            }
-        }
-    }
-    cout << endl;
-}
-```
-</details>
-
 <details>
     <summary>Kode Untuk Solusi B (C++ stdio.h library)</summary>
 
@@ -108,52 +100,53 @@ int main()
 #include <stdio.h>
 #include <cmath>
 
-int pangkatTerbesar(long long& k, long long& n)
-{
-    int a = 0;
-    long long p = k;
-    while (n % p == 0) {
-        a++;
-        p *= k;
-    }
-    p /= k;
-    n /= p;
-    return a;
+int pangkatTerbesar(long long& k, long long& n) {
+  int a = 0;
+  long long p = k;
+  while (n % p == 0) {
+    a++;
+    p *= k;
+  }
+  p /= k;
+  n /= p;
+  return a;
 }
 
-int main()
-{
-    long long N;
-    int a;
-    scanf("%lld", &N);
-    bool pertama = true;
-    for (long long i = 2; i <= sqrt(N); i++) {
-        if (N % i == 0) {
-            a = pangkatTerbesar(i, N);
-            // mengkondisikan output
-            if (pertama) {
-                pertama = false;
-            }
-            else {
-                printf(" x ");
-            }
-            printf("%lld", i);
-            if (a > 1) {
-                printf("^%lld", a);
-            }
-        }
+int main() {
+  long long N;
+  int a;
+  scanf("%lld", &N);
+  bool pertama = true;
+  for (long long i = 2; i <= sqrt(N); i++) {
+    if (N % i == 0) {
+      a = pangkatTerbesar(i, N);
+      // mengkondisikan output
+      if (pertama) {
+        pertama = false;
+      } else {
+        printf(" x ");
+      }
+      printf("%lld", i);
+      if (a > 1) {
+        printf("^%lld", a);
+      }
     }
-    // jika nilai N akhir bukan 1, berarti N akhir itu faktor prima N awal
-    if (N > 1) {
-        if (!pertama) {
-            printf(" x ");
-        }
-        printf("%lld", N);
+  }
+  // jika nilai N akhir bukan 1, berarti N akhir itu faktor prima N awal
+  if (N > 1) {
+    if (!pertama) {
+      printf(" x ");
     }
-    printf("\n");
+    printf("%lld", N);
+  }
+  printf("\n");
 }
 ```
 </details>
+
+Kompleksitas Waktu Solusi B: $O(\sqrt{N})$
+
+Kompleksitas Memori Solusi B: $O(1)$
 
 ## Komentar
     
