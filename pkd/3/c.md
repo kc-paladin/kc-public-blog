@@ -4,7 +4,7 @@ Author: Andreas Timothy
 
 Pada problem ini kita diminta untuk mencari nomor telepon dari setiap orang. Tapi kali ini kita ga bisa lakuin linear search kaya soal-soal sebelumnya😞. Kira-kira gimana ya cara nyarinya biar cepet?🤔
 
-💡Ahaa, kita bisa pakai `map`. `Map` memungkinkan kita untuk nyimpen data dalam format _key:value_ dimana kita bisa _assign_ value untuk suatu key **unik**. Cocok banget buat soal ini dimana kita mau _assign_ nomor ke orang yang bersangkutan, dan nama-nama orangnya dijamin unik.
+💡Ahaa, kita bisa pakai `map`. `Map` memungkinkan kita untuk nyimpen data dalam format _key:value_ dimana kita bisa _assign_ value untuk suatu key **unik**. Cocok banget buat soal ini dimana kita mau _assign_ nomor ke orang yang bersangkutan, dan nama-nama orangnya dijamin unik. Dan yang paling penting, mengakses elemen di map itu cepet lho🥰.
 
 Kompleksitas Waktu: $O((N+Q)\ log\ N)$
 
