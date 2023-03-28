@@ -4,7 +4,7 @@ Author: Yazid Aqila Haikal
 
 Haloo.. !! 👋
 
-Di soal ini, kita diminta untuk mengoperasikan sebuah *perulangan* ✨🙌.
+Di [soal ini](https://tlx.toki.id/courses/basic/chapters/06/problems/B), kita diminta untuk mengoperasikan sebuah *perulangan* ✨🙌.
 
 Yang dimana, di dalam bahasa pemrograman C++, terdapat fungsi **`for`** sebagai salah satu cara mengoperasikan *perulangan*.
 
