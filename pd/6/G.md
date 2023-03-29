@@ -114,7 +114,17 @@ Soal ini meminta kita untuk membantu Pak Dengklek *mencari* bilangan terbesar da
 <details>
   <summary>Solusi Soal</summary>
 
-**1. Menggunakan For**
+<details>
+  <summary>💡 <b>Ide Solusi</b> 💡</summary>
+
+1. Permisalkan masukan pertama sebagai nilai yang paling besar dan paling kecil.
+2. Buat perulangan sebanyak $N-1$ kali untuk memasukkan bilangan yang lain.
+3. Setiap perulangan langsung periksa, jika masukan baru lebih besar daripada bilangan sebelumnya, maka bilangan tersebut menjadi bilangan paling besar.
+4. Periksa juga, jika masukan baru lebih kecil daripada bilangan sebelumnya, maka bilangan tersebut menjadi bilangan paling kecil.
+5. Nah, habis itu udaaah 😇✨.
+</details>
+
+1. Menggunakan For
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -125,10 +135,10 @@ int main() {
   int A = Ni, B = Ni; //A = terbesar, B = terkecil
   for (int i = 1; i < N; i++) {
     cin >> Ni;
-    if(Ni > A){
-        A = Ni;
-    }else if(Ni < B){
-        B = Ni;
+    if(Ni > A){ //Periksa jika Ni lebih besar dari A
+        A = Ni; //Nilai A akan menjadi Ni
+    }else if(Ni < B){ //Periksa jika Ni lebih kecil dari B
+        B = Ni; //Nilai B akan menjadi Ni
     }
   }
   cout << A << " " << B << endl;
@@ -136,7 +146,7 @@ int main() {
 }
 ```
 
-**2. Menggunakan While**
+2. Menggunakan While
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -147,10 +157,10 @@ int main() {
   int A = Ni, B = Ni; //A = terbesar, B = terkecil
   while(i < N){
     cin >> Ni;
-    if(Ni > A){
-        A = Ni;
-    }else if(Ni < B){
-        B = Ni;
+    if(Ni > A){ //Periksa jika Ni lebih besar dari A
+        A = Ni; //Nilai A akan menjadi Ni
+    }else if(Ni < B){ //Periksa jika Ni lebih kecil dari B
+        B = Ni; //Nilai B akan menjadi Ni
     }
   }
   cout << A << " " << B << endl;
