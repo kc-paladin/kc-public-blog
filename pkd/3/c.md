@@ -4,11 +4,11 @@ Author: Andreas Timothy
 
 Pada problem ini kita diminta untuk mencari nomor telepon dari setiap orang. Tapi kali ini kita ga bisa lakuin linear search kaya soal-soal sebelumnya😞. Kira-kira gimana ya cara nyarinya biar cepet?🤔
 
-💡Ahaa, kita bisa pakai `map`. `Map` memungkinkan kita untuk nyimpen data dalam format _key:value_ dimana kita bisa _assign_ value untuk suatu key **unik**. Cocok banget buat soal ini dimana kita mau _assign_ nomor ke orang yang bersangkutan, dan nama-nama orangnya dijamin unik. Dan yang paling penting, mengakses elemen di map itu cepet lho🥰.
+💡Ahaa, kita bisa pakai `map`. `Map` memungkinkan kita untuk nyimpen data dalam format _key:value_ dimana kita bisa _assign_ value untuk suatu key **unik**. Cocok banget buat soal ini dimana kita mau _assign_ nomor ke orang yang bersangkutan, dan nama-nama orangnya dijamin unik. Dan yang paling penting, mengakses elemen di map cuma butuh waktu $O(log\ N)$🥰.
 
 Kompleksitas Waktu: $O((N+Q)\ log\ N)$
 
-Kompleksitas Memori: $O(Total\ panjang\ string\ input)$
+Kompleksitas Memori: $O(\text{Total\ panjang\ string\ input})$
 
 <details>
   <summary>Solution Code</summary>
@@ -44,6 +44,7 @@ int main() {
 ## Komentar
 
 - Soal ini juga bisa diselesaikan dengan cara lain, seperti menggunakan `std::set` atau _binary search_
+- Pastikan untuk menyimpan nomor dalam tipe data string karena dapat mengandung _leading zero_
 
 ## Materi Yang Berhubungan
 
