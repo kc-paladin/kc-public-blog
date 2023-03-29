@@ -18,7 +18,7 @@ while (cnt < k) {
 cout << i << '\n';
 ```
 
-Sayangnya, pengecekan tersebut terlalu lambat, karena $K_{\max} = 77777$ menyebabkan kita bisa mencapai nilai $i$ sebesar $> 10^5$, dan karena ada $T = 2 \times 10^4$ *query*, kita bisa mencapai total $> 2 \times 10^9$ operasi (Belum lagi operasi yang ditambahkan untuk mengecek $i$ prima atau tidak), tentunya ini tidak akan *pass time limit* yang di-inginkan.
+Sayangnya, pengecekan tersebut terlalu lambat, karena $K_{\max} = 77777$ menyebabkan kita bisa mencapai nilai $i$ sebesar $> 10^5$, dan karena ada $T = 2 \times 10^4$ *query*, kita bisa mencapai total $> 2 \times 10^9$ operasi (Belum lagi operasi yang ditambahkan untuk mengecek $i$ prima atau tidak), tentunya ini tidak akan *pass time limit* yang diinginkan.
 
 Lantas, bagaimana cara menyelesaikan soal ini?
 
@@ -79,12 +79,12 @@ int main() {
   vector<int> primes;
   vector<bool> isPrime(N + 1, true);
   isPrime[1] = false;
-  for (int i = 2; i < N; i++) {
+  for (int i = 2; i <= N; i++) {
     if (!isPrime[i]) {
       continue;
     }
     primes.emplace_back(i);
-    for (int j = i + i; j < N; j += i) {
+    for (int j = i + i; j <= N; j += i) {
       isPrime[j] = false;
     }
   }
