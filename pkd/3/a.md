@@ -4,7 +4,7 @@ Author: Andreas Timothy
 
 Pada dasarnya problem ini hanya meminta kita untuk mencari kupon dengan selisih terkecil terhadap kupon $X$, apabila ada lebih dari 1 kupon yang memenuhi keluarkan kupon dengan nomor terkecil.
 
-Untuk menyelesaikan problem ini, kita cukup mengecek selisih setiap kupon dengan kupon $X$ dan mengambil selisih yang terkcil. Apabila terdapat selisih yang sama maka pilih kupon dengan nomor terkecil.
+Untuk menyelesaikan problem ini, kita cukup mengecek selisih setiap kupon dengan kupon $X$ dan mengambil selisih yang terkecil. Apabila terdapat selisih yang sama maka pilih kupon dengan nomor terkecil.
 
 Kompleksitas Waktu: $O(N)$
 
