@@ -2,10 +2,10 @@
 
 Author: Faishal Falih
 
-Pada soal ini diminta untuk mengeluarkan nilai dari pembulatan ke bawah dan pembulatan ke atas
-dari sebuah bilangan N secara berurutan.
+Pada soal ini kita diminta untuk mengeluarkan nilai dari pembulatan ke bawah dan pembulatan ke atas
+dari sebuah bilangan $N$ secara berurutan.
 
-Dalam C++, kita bisa menggunakan *keyword* berupa 'floor' untuk pembulatan ke bawah dan 'ceil'
+Dalam C++, kita bisa menggunakan *keyword* berupa `floor` untuk pembulatan ke bawah dan `ceil`
 untuk pembulatan ke atas.
 
 Kompleksitas Waktu: $O(1)$
