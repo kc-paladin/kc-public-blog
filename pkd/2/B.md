@@ -59,7 +59,7 @@ Sehingga untuk menyelesaikan soal ini, kita bisa melakukan beberapa modifikasi p
 
 Kompleksitas Waktu: $O(N \log^2 N + T)$
 
-Kompleksitas Memori: $O(N + K_{max})$
+Kompleksitas Memori: $O(N + K_{\max})$
 
 <details>
   <summary>Solution Code</summary>
