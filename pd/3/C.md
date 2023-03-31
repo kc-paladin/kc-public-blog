@@ -8,9 +8,9 @@ Secara singkat, fungsi `getline` ini digunakan untuk membaca input dari pengguna
 
 Jadi, kita bisa mengaplikasikan fungsi ini ke persoalan tersebut untuk menyelesaikannya.
 
-Kompleksitas Waktu: $O(N)$
+Kompleksitas Waktu: $O(1)$
 
-Kompleksitas Memori: $O(N)$
+Kompleksitas Memori: $O(1)$
 
 <details>
   <summary>Solution Code</summary>
@@ -33,7 +33,8 @@ int main() {
 
 ## Materi Yang Berhubungan
     
-- https://www.geeksforgeeks.org/getline-string-c/
-- https://www.geeksforgeeks.org/cin-in-c/
-- https://www.geeksforgeeks.org/problem-with-getline-after-cin/
+- [getline (string) in C++](https://www.geeksforgeeks.org/getline-string-c/)
+- [cin in C++](https://www.geeksforgeeks.org/cin-in-c/)
+- [Problem with getline() after cin >>](https://www.geeksforgeeks.org/problem-with-getline-after-cin/)
 
+  
