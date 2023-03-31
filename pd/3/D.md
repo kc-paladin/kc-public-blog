@@ -4,7 +4,7 @@ Author: Eileen Camelia Limneus
 
 Untuk menyelesaikan persoalan ini, kita harus berkenalan sama **modulo** dulu. Nah, apa itu **modulo**?
 
-**Modulo** adalah sebuah fungsi untuk menentukan sisa bagi integer. Operator **modulo** dilambangkan dengan `%` di C/C++.
+**Modulo** adalah sebuah fungsi untuk menentukan sisa bagi integer. Operator **modulo** dilambangkan dengan `%` di C/C++. Untuk contohnya, telah disediakan di website ***tlx.toki.id*** ya!
 
 >Catatan: Perlu diketahui bahwa operasi pembagian akan membagi kedua operand lalu dibulatkan (ke bawah untuk hasil positif, ke atas untuk hasil negatif).
 
@@ -33,6 +33,10 @@ int main() {
 }
 ```
 </details>
+
+## Komentar
+    
+- Operasi modulo sering digunakan dalam berbagai persoalan seperti membagi bilangan ke dalam kelompok, melakukan perulangan, menentukan urutan dan lainnya. 
 
 ## Materi Yang Berhubungan
     
