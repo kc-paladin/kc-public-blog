@@ -2,11 +2,11 @@
 
 Author: Eileen Camelia Limneus
 
-Untuk menyelesaikan persoalan ini, kita harus berkenalan sama **modulo** dulu. Nah, apa itu modulo?
+Untuk menyelesaikan persoalan ini, kita harus berkenalan sama **modulo** dulu. Nah, apa itu **modulo**?
 
-**Modulo** adalah sebuah fungsi untuk menentukan sisa bagi integer. Operator modulo dilambangkan dengan `%` di C/C++.
+**Modulo** adalah sebuah fungsi untuk menentukan sisa bagi integer. Operator **modulo** dilambangkan dengan `%` di C/C++.
 
-Perlu diketahui juga, operasi pembagian akan membagi kedua operand lalu dibulatkan (ke bawah untuk hasil positif, ke atas untuk hasil negatif).
+>Catatan: Perlu diketahui bahwa operasi pembagian akan membagi kedua operand lalu dibulatkan (ke bawah untuk hasil positif, ke atas untuk hasil negatif).
 
 Kompleksitas Waktu: $O(1)$
 
