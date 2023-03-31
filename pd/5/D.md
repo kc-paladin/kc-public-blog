@@ -15,20 +15,18 @@ Kompleksitas Memori: $O(1)$
   <summary>Solution Code</summary>
 
 ```c++
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-	int n; //deklarasi variabel input
-	cin>>n; //input
-	if(n>0){ //jika n>0
-		cout<<"positif"<<endl; //cetak positif
-	}
-	else if(n<0){ //jika n<0
-		cout<<"negatif"<<endl; //cetak negatif
-	}
-	else{ //selain kasus diatas, maka n==0
-		cout<<"nol"<<endl; //cetak nol 
-	}
+int main() {
+  int n;  // deklarasi variabel input
+  cin >> n;  // input
+  if (n > 0) {  // jika n>0
+    cout << "positif" << endl;  // cetak positif
+  } else if (n < 0) {  // jika n<0
+    cout << "negatif" << endl;  // cetak negatif
+  } else {  // selain kasus diatas, maka n==0
+    cout << "nol" << endl;  // cetak nol
+  }
 }
 ```
 </details>
@@ -47,7 +45,7 @@ int main(){
 -->
 ## Materi Yang Berhubungan
     
-- https://prepinsta.com/cpp-program/cpp-program-to-check-whether-a-number-is-positive-or-negative/
+-  [how to check whether a number is postitve or negative in C++](https://prepinsta.com/cpp-program/cpp-program-to-check-whether-a-number-is-positive-or-negative/)
 
 
 <!-- Tambahkan referensi link soal yang berhubungan apabila perlu
