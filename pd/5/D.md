@@ -3,7 +3,7 @@
 Author: Hamiz Ghani
 
 <!-- Masukkan penjelasan disini -->
-Pada soal ini kita diminta untuk membuat program yang menerima suatu bilangan bulat $N$. Apabila $N$ bilangan bulat positif, cetak `positif`. Jika $N$ bilangan bulat negatif, cetak `negatif`. Selain itu (apabila N=0), cetak `nol`. 
+Pada soal ini kita diminta untuk membuat program yang menerima suatu bilangan bulat $N$. Apabila $N$ bilangan bulat positif, cetak `positif`. Jika $N$ bilangan bulat negatif, cetak `negatif`. Selain itu apabila $N=0$, cetak `nol`. 
 
 Dalam C++, kita bisa menggunakan _keyword_ `if`, `else` dan `else if`.
 
