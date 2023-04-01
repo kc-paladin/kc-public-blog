@@ -4,12 +4,14 @@ Author: Muhammad Hasan
 
 Dalam persoalan ini, kita diberikan $N$ berat bebek $B_1, B_2, \dots, B_N$ terurut secara tidak menurun $(B_1 \leq B_2 \leq \cdots \leq B_N)$.
 
-Kemudian, untuk setiap query, diberikan $X$ dan $Y$, kita perlu mencari banyaknya $B_i$ sedemekian sehingga $X < B_i \leq Y$ dengan $1 \leq i \leq N$.
+Kemudian, untuk setiap query, diberikan $X$ dan $Y$, kita perlu mencari banyaknya $B_i$ sedemikian sehingga $X < B_i \leq Y$ dengan $1 \leq i \leq N$.
 
 Soal ini dapat kita selesaikan menggunakan **Binary Search**, lebih khususnya lagi, dalam C++ kita dapat memanfaatkan utilitas bawaan bernama `lower_bound` ataupun `upper_bound`.
 
 <details>
-  <summary>Penjelasan <code>lower_bound</code> dan <code>upper_bound</code></summary>
+  <summary>Penjelasan <code>lower_bound</code> dan <code>upper_bound</code> Dalam C++ </summary>
+
+## Lower Bound dan Upper Bound Dalam C++
 
 `lower_bound` dan `upper_bound` adalah dua fungsi dalam C++ yang digunakan untuk mencari posisi elemen tertentu di dalam suatu array yang sudah terurut secara tidak menurun. Hasil pencarian ini didasari dengan **Binary Search** sehingga jika menggunakan-nya pada array dengan $N$ elemen, maka kompleksitas waktu yang didapat adalah $O(\log N)$.
 
@@ -17,11 +19,11 @@ Soal ini dapat kita selesaikan menggunakan **Binary Search**, lebih khususnya la
 
 Misalnya, jika kita memiliki sebuah array yang diurutkan dari kecil ke besar seperti $[1, 2, 3, 4, 5]$.
 
-Apabila kita mencari `lower_bound` dari nilai $3$, maka hasilnya adalah indeks $2$ (karena nilai pada indeks $2$ adalah $3$ atau lebih besar dari $3$). Sementara itu, jika kita mencari `upper_bound` dari nilai $3$, maka hasilnya adalah indeks $3$ (karena nilai pada indeks $3$ adalah $4$, yang merupakan nilai pertama yang lebih besar dari $3$).
+Apabila kita mencari `lower_bound` dari nilai $3$, maka hasilnya adalah indeks $2$ (karena nilai pada indeks $2$ adalah $3$ atau lebih besar dari sama dengan $3$). Sementara itu, jika kita mencari `upper_bound` dari nilai $3$, maka hasilnya adalah indeks $3$ (karena nilai pada indeks $3$ adalah $4$, yang merupakan nilai pertama yang lebih besar dari $3$).
 
 Berikut adalah contoh kode sederhana untuk menggunakan `lower_bound` dan `upper_bound` dalam C++:
 
-```c++
+```cpp
 #include <bits/stdc++.h>
 
 using namespace std;
