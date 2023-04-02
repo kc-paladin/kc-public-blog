@@ -1,4 +1,4 @@
-# [Kualitas Baju](https://tlx.toki.id/courses/competitive/chapters/03/problems/G)
+# [G. Kualitas Baju](https://tlx.toki.id/courses/competitive/chapters/03/problems/G)
 
 Author: Andreas Timothy
 
