@@ -8,6 +8,10 @@ Dalam mengerjakan soal-soal yang berhubungan dengan **Dynamic Programming** (DP)
 
 Kemudian, disini akan dibahas 2 solusi yang diharap bisa membantu pembaca memahami cara melakukan optimisasi DP.
 
+**Catatan**:
+- Solusi 1 tidak cukup untuk batas **memory limit** yang diberikan, sehingga apabila ingin melihat solusi yang AC bisa melihat pada Solusi 2.
+- Solusi 1 dan Solusi 2 diberikan agar pembaca bisa melihat langkah observasi dan optimisasi yang dilakukan.
+
 ## Solusi 1 - Dynamic Programming 2 State
 
 Kita dapat menggunakan Dynamic Programming (DP) 2 State. 
