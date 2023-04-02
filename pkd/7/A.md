@@ -6,15 +6,15 @@ Pada soal ini kita diberikan $N$ buah koin bernilai $C_1, C_2, \dots, C_N$. Kemu
 
 Dalam mengerjakan soal-soal yang berhubungan dengan **Dynamic Programming** (DP), penting untuk kita tau, **definisi dari DP** yang ingin kita buat, **state-state awal** dan **transisi** yang dapat terjadi pada DP. Pada soal ini akan kita lihat demonstrasi pengerjaan soal DP.
 
-Kemudian, disini akan dibahas 2 solusi yang diharap bisa membantu pembaca memahami cara melakukan optimisasi DP.
+Kemudian, disini akan dibahas $2$ solusi yang diharap bisa membantu pembaca memahami cara melakukan optimisasi DP.
 
 **Catatan**:
-- Solusi 1 tidak cukup untuk batas **memory limit** yang diberikan, sehingga apabila ingin melihat solusi yang AC bisa melihat pada Solusi 2.
-- Solusi 1 dan Solusi 2 diberikan agar pembaca bisa melihat langkah observasi dan optimisasi yang dilakukan.
+- Solusi $1$ tidak cukup untuk batas **memory limit** yang diberikan, sehingga apabila ingin melihat solusi yang AC bisa melihat pada Solusi $2$.
+- Solusi $1$ dan Solusi $2$ diberikan agar pembaca bisa melihat langkah observasi dan optimisasi yang dilakukan.
 
-## Solusi 1 - Dynamic Programming 2 State
+## Solusi $1$ - Dynamic Programming $2$ State
 
-Kita dapat menggunakan Dynamic Programming (DP) 2 State. 
+Kita dapat menggunakan Dynamic Programming (DP) $2$ State. 
 
 Yang pertama perlu dilakukan adalah mencari definisi DP yang tepat. 
 
@@ -24,10 +24,10 @@ Dengan membaca dan menteliti soal, kita bisa membuat definisi DP sebagai berikut
 
 Contohnya, apabila kita mempunyai koin seperti soal $[1,2,5,6]$, beberapa contoh nilai yang kita ekspektasi:
 
-- $dp[1][2]$ = 2 $\rightarrow$ Kita dapat mengambil koin berupa $1$ dan $1$.
-- $dp[1][3]$ = 3 $\rightarrow$ Kita dapat mengambil koin berupa $1$, $1$, dan $1$.
-- $dp[2][2]$ = 1 $\rightarrow$ Kita dapat mengambil koin berupa $2$.
-- $dp[2][3]$ = 2 $\rightarrow$ Kita dapat mengambil koin berupa $1$ dan $2$.
+- $dp[1][2] = 2 \rightarrow$ Kita dapat mengambil koin berupa $1$ dan $1$.
+- $dp[1][3] = 3 \rightarrow$ Kita dapat mengambil koin berupa $1$, $1$, dan $1$.
+- $dp[2][2] = 1 \rightarrow$ Kita dapat mengambil koin berupa $2$.
+- $dp[2][3] = 2 \rightarrow$ Kita dapat mengambil koin berupa $1$ dan $2$.
 
 Kemudian, kita dapat mendefinisikan **state awal** kita dengan $dp[0][0]=0$, karena pada awalnya, kita tidak perlu memiliki koin apapun untuk nilai kembalian $0$ (hanya butuh tepat $0$ koin). 
 
@@ -86,9 +86,9 @@ int main() {
 ```
 </details>
 
-## Solusi 2 - Dynamic Programming 1 State
+## Solusi $2$ - Dynamic Programming $1$ State
 
-Perhatikan bahwa, pada transisi sebelumnya hanya terjadi transisi antara $i$ dengan $i - 1$, biasanya soal-soal seperti ini bisa kita *optimize* menjadi **DP 1 State** saja. Bagaimana cara optimisasinya? Mari kita lihat.
+Perhatikan bahwa, pada transisi sebelumnya hanya terjadi transisi antara $i$ dengan $i - 1$, biasanya soal-soal seperti ini bisa kita *optimize* menjadi **DP $1$ State** saja. Bagaimana cara optimisasinya? Mari kita lihat.
 
 Kita akan lakukan hal yang mirip dengan penjelasan sebelumnya. 
 
