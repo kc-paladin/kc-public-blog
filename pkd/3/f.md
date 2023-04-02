@@ -1,10 +1,10 @@
-# [Pesta Bebek](https://tlx.toki.id/courses/competitive/chapters/03/problems/F)
+# [F. Pesta Bebek](https://tlx.toki.id/courses/competitive/chapters/03/problems/F)
 
 Author: Andreas Timothy
 
 Pada problem ini kita diminta untuk menyisipkan $N$ buah string satu per satu, lalu dalam setiap penyisipan kita diminta untuk mencari pada urutan ke berapa string tersebut setelah diurutkan.
 
-Dari deskripsi diatas, kita udah bisa ngerasain problem ini cocok diselesaikan dengan _insertion sort_.
+Dari deskripsi di atas, kita udah bisa ngerasain problem ini cocok diselesaikan dengan _insertion sort_.
 
 Kompleksitas Waktu: $O(N^2)$
 
