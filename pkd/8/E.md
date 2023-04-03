@@ -12,7 +12,7 @@ Dalam mendapatkan nilai total berat minimal yang diangkat, pada intinya kita har
 
 Kita definisikan $W_X$ sebagai batu dengan berat terkecil yang mana batu sebelahnya bisa kita hancurkan.
 
-Kita bisa selesaikan soal ini dengan mencari $W_X$ dan lakukan hal tersebut berulang-ulang. Namun, sayangnya ini terlalu lambat karena mencari $W_X$ membutuhkan kompleksitas waktu $O(N)$,
+Kita bisa selesaikan soal ini dengan mencari $W_X$ dan lakukan hal tersebut berulang-ulang. Namun, sayangnya ini terlalu lambat, karena mencari $W_X$ membutuhkan kompleksitas waktu $O(N)$,
 sementara kita melakukan hal ini berkali-kali sehingga kita bisa mendapatkan kompleksitas waktu total $O(N^2)$ 
 
 Disinilah manfaatnya kita belajar dan menggunakan struktur data, untuk menanggulangi permasalahan lambatnya kompleksitas waktu, kita bisa gunakan `std::set` untuk menyelesaikan soal ini. Gunanya `std::set` disini agar kita bisa mencari nilai $W_X$ dengan cepat, yakni setiap kita cari hanya membutuhkan kompleksitas waktu $O(\log N)$. Namun, bagaimana cara melakukan hal tersebut?
