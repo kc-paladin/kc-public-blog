@@ -5,7 +5,11 @@ Author: Daniel Simanullang
 Prerequisite(s) : BFS
 
 <!-- Masukkan penjelasan disini -->
-Soal ini hanya soal klasik (BFS pada grid). Pada soal ini, kita hanya perlu untuk menggunakan algoritma BFS untuk mencari jalan keluar terpendek. Kita akan menggunakan array $dist$ untuk menyimpan jarak terpendek dari setiap titik ke titik awal.Array $dx$ dan $dy$ disini digunakan untuk arah gerak sumbu $x$ dan sumbu $y$. Untuk mencari jarak terpendek, kita hanya perlu membuat $dist[t.first + dx[i]][t.second + dy[i]] = dist[t.first][t.second] + 1$. Maksud dari persamaan ini ialah ketika kita ingin mencapai suatu titik, maka jalan terbaik hanya di dapat melalui titik sebelumnya yang berjarak $1$ dari titik tersebut. 
+Soal ini hanya soal klasik (BFS pada grid). Pada soal ini, kita hanya perlu untuk menggunakan algoritma BFS untuk mencari jalan keluar terpendek. Kita akan menggunakan array $dist$ untuk menyimpan jarak terpendek dari setiap titik ke titik awal.Array $dx$ dan $dy$ disini digunakan untuk arah gerak sumbu $x$ dan sumbu $y$. Untuk mencari jarak terpendek, kita hanya perlu membuat 
+
+$dist[t.first + dx[i]][t.second + dy[i]] = dist[t.first][t.second] + 1$. 
+
+Maksud dari persamaan ini ialah ketika kita ingin mencapai suatu titik, maka jalan terbaik hanya di dapat melalui titik sebelumnya yang berjarak $1$ dari titik tersebut. 
 
 Kompleksitas Waktu: $O(N+M)$
 
