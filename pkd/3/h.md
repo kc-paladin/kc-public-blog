@@ -58,8 +58,10 @@ int main() {
 ## Komentar
 
 - Gunakan tipe data `double` untuk menyimpan bilangan desimal agar lebih akurat.
+- Sorting juga bisa dilakukan menggunakan `std::sort` bawaan atau metode lain agar lebih cepat, namun disini menggunakan sorting $O(N^2)$ sudah cukup untuk menyelesaikan soal
 
 ## Materi Yang Berhubungan
 
 - [C++ Pair](https://www.geeksforgeeks.org/pair-in-cpp-stl/)
 - [C++ Struct](https://www.w3schools.com/cpp/cpp_structs.asp)
+- [std::sort](https://www.geeksforgeeks.org/sort-c-stl/)
