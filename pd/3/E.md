@@ -17,7 +17,7 @@ Karena soal meminta anda untuk mengeluarkan hasil dengan 2 angka di belakang kom
 Pada bahasa **_C++_**, setidaknya terdapat dua cara berikut untuk melakukan *formatting* angka dibelakang koma:
 1. Menggunakan `printf`, contoh penggunaan:
 
-    ```
+    ```c++
     float PI = 3.1415;
     float tiga = 3;
 
@@ -26,7 +26,7 @@ Pada bahasa **_C++_**, setidaknya terdapat dua cara berikut untuk melakukan *for
     ```
 2. Menggunakan `setprecision`, contoh penggunaan:
 
-    ```
+    ```c++
     float PI = 3.1415;
     float tiga = 3;
 
