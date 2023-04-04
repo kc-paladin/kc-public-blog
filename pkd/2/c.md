@@ -10,7 +10,11 @@ Pedagang $i$ dan pedagang $j$ pasti bertemu di hari yang merupakan kelipatan dar
 
 ### **Observasi 2**
 
-Misalkan sekarang kita berada di index ke-$i$ dan kita sudah mempunyai nilai $KPK(D_1, ..., D_{i-1})$, sebut saja nilai ini $val$. Maka $KPK(D_1, ..., D_i) = KPK(val, D_i)$.
+Perhatikan bahwa nilai $\text{KPK}$ dari seluruh bilangan dalam array $D$ dapat diformulasikan sebagai berikut:
+
+$KPK(...KPK(KPK(D_1, D_2), D_3), ...D_n)$
+
+Kita akan melakukan iterasi dari index $1$ hingga $N$. Misalkan sekarang kita berada di index ke-$i$ dan kita sudah mempunyai nilai $KPK(D_1, ..., D_{i-1})$, sebut saja nilai ini $val$. Maka $KPK(D_1, ..., D_i) = KPK(val, D_i)$.
 
 Kita akan menggunakan sifat berikut untuk mencari nilai $\text{KPK}$:
 
