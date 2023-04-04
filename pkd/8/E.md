@@ -89,3 +89,7 @@ int main() {
 ## Komentar
     
 - Soal ini juga bisa diselesaikan dengan data struktur lain seperti DSU (Disjoint Set Union) yang digunakan untuk "menggabungkan" batu yang sudah dihancurkan. Namun, cara diatas sudah lebih baik dan lebih sederhana.
+
+## Materi Yang Berhubungan
+
+- [Set in C++](https://www.geeksforgeeks.org/set-in-cpp-stl/)
