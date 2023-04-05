@@ -2,7 +2,7 @@
 
 Author: Muhammad Hasan
 
-Pada soal ini kita diberikan *weighted graph* dan diberikan $Q$ kota $P_1, P_2, \dots, P_Q$, kita perlu telurusi $Q$ kota tersebut dengan waktu minimal.
+Pada soal ini kita diberikan *weighted graph* dan diberikan $Q$ kota $P_1, P_2, \dots, P_Q$, kita perlu telurusi $Q$ kota tersebut secara berurutan dengan waktu minimal.
 
 Didefinisikan $dist[U][V] =$ 
 waktu minimal yang dibutuhkan untuk pergi dari $U$ ke $V$.
