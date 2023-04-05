@@ -1,4 +1,4 @@
-# [D. Hobi Batu Akik](https://tlx.toki.id/courses/competitive/chapters/10/problems/B)
+# [B. Hobi Batu Akik](https://tlx.toki.id/courses/competitive/chapters/10/problems/B)
 
 Author: Muhammad Hasan
 
