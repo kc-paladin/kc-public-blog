@@ -10,15 +10,14 @@ waktu minimal yang dibutuhkan untuk pergi dari $U$ ke $V$.
 Maka solusi dari soal ini sebetulnya mudah saja, untuk setiap kota bersebalahan kita gunakan waktu minimal untuk mencapainya.
 
 Lebih formalnya, jawaban dari persoalan ini adalah:
+
 $$
 \begin{align}
-
 \text{Jumlah waktu minimal} &= \sum_{i=2}^{Q} dist[P_{i-1}][P_i]  \\
-
 &= dist[P_1][P_2] + dist[P_2][P_3] + \cdots + dist[P_{Q-1}][P_Q]
-
 \end{align}
 $$
+
 Sehingga permasalahan lain dari soal ini adalah bagaimana cara mendapatkan $dist$ tersebut.
 
 Ini mudah kita dapatkan dengan beberapa algoritma *shortest graph* yang ada, namun perhatikan bahwa disini $N_{\max} = 200$ 
