@@ -2,7 +2,7 @@
 
 Author: Muhammad Hasan
 
-Pada soal ini diberikan $N$ pesawat $P_1, P_2, \dots, P_N$ dengan informasi pesawat $P_i$ sebagai $(T_i, V_i)$ dimana 
+Pada soal ini diberikan $N$ pesawat $P_1, P_2, \dots, P_N$ dengan pesawat $P_i=(T_i, V_i)$ dimana 
 $T_i=$ detik keberangkatan pesawat ke-$i$ dan $V_i$ kecepatan satuan / detik pesawat ke-$i$. 
 Selain itu, setiap $P_i$ ditaruh pada koordinat $(i, 0)$.
 
@@ -16,9 +16,9 @@ Disini kita bisa melakukan beberapa observasi.
 Perhatikan bahwa, apabila kita menaruh radar $R$ pada suatu koordinat $(A, B)$ maka:
 
 - Semua pesawat $P_i$ dengan koordinat $(i, 0)$ dapat menerima sinyal radar 
-$R$ jika $i < A$ dan tidak ada $P_j$ sedimikian sehingga $P_i = P_j$ dan $i < j$.
+$R$ jika $i < A$ dan tidak ada $P_j$ sedimikian sehingga nilai $P_i =$ nilai $P_j$ dan $i < j$.
 - Semua pesawat $P_i$ dengan koordinat $(i, 0)$ dapat menerima sinyal radar 
-$R$ jika $i > A$ dan tidak ada $P_j$ sedimikian sehingga $P_i = P_j$ dan $j < i$.
+$R$ jika $i > A$ dan tidak ada $P_j$ sedimikian sehingga nilai $P_i=$ nilai $P_j$ dan $j < i$.
 
 Hal ini didapat dengan memilih $B$ yang tepat (memilih $B$ agar banyaknya pesawat yang terkena semaksimal mungkin).
 
