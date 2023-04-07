@@ -2,7 +2,7 @@
 
 ![Willy](https://cdn.discordapp.com/attachments/1023918533601661019/1093028579329187880/image.png)
 
-Gambar 1.1 Sebuah percakapan di *Errichto Server Official*
+Sebuah percakapan di *Errichto Server Official*
 
 Author: Daniel Simanullang
 
@@ -12,9 +12,9 @@ Prerequisite(s) : Disjoint Set Union (DSU)
 
 Soal ini hanyalah soal DSU klasik. Kita hanya perlu menggunakan 2 operasi, yaitu $merge$ dan $connected$. Disini, $merge$ adalah operasi untuk menggabungkan 2 node (atau pada konteks soal ini yaitu kandang) dan $connected$ adalah operasi untuk mengecek apakah 2 node terhubung atau tidak. Operasi tambahan seperti $find$ digunakan untuk mencari parent dari suatu node.
 
-Kompleksitas Waktu: $O$(log $n$)
+Kompleksitas Waktu: $O$(log $N$)
 
-Kompleksitas Memori: $O$(n)$
+Kompleksitas Memori: $O(N)$
 
 <details>
   <summary>Solution Code</summary>
