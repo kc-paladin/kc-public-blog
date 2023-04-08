@@ -38,7 +38,14 @@ int main() {
 
 ## Komentar
     
-- Program ini dapat diselesaikan dengan cara lain juga seperti menggunakan sistem bilangan biner dan operasi bitwise `AND`. Caranya adalah dengan mengecek kondisi `n & (n-1) == 0` dimana hasil dari operasi tersebut akan selalu 0 pada bilangan "dua pangkat".
+- Program ini dapat diselesaikan dengan cara lain juga seperti menggunakan sistem bilangan biner dan operasi bitwise `AND`. Caranya adalah dengan mengecek kondisi `n & (n-1) == 0` dimana hasil dari operasi tersebut akan selalu 0 pada bilangan "dua pangkat". Boleh cek materi dibawah terlebih dahulu ya!
+```c++
+  if ((n & (n - 1)) == 0) {
+    cout << "ya\n";
+  } else {
+    cout << "bukan\n";
+  }
+```
 
 ## Materi Yang Berhubungan
     
