@@ -2,7 +2,7 @@
 
 Author: Muhammad Hasan
 
-Soal ini hanya mendemonstrasikan bagaimana kita *input* dua angka $A$ dan $B$ dan output hasil perjumlahan $A + B$.
+Soal ini hanya mendemonstrasikan bagaimana kita *input* dua bilangan bulat $A$ dan $B$ dan output hasil perjumlahan $A + B$.
 
 Pada C++ Kita bisa gunakan `cin` dan `cout` untuk hal ini.
 

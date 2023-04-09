@@ -63,4 +63,4 @@ int main()
 
 ## Komentar
     
-- Cara alternatif untuk menyelesaikan soal ini adalah dengan menggunakan 2D array (Baca tentang array [di sini](https://tlx.toki.id/courses/basic/chapters/09/lessons/A)), membaca 3 masukan per baris dan memasukkannya ke dalam array menurut posisi baris dan kolom, kemudian masukan ke- $j$ di baris ke- $i$ akan menjadi bilangan ke- $i$ di baris ke- $j$ di dalam keluaran. Strategi ini lebih efektif jika ukuran matriks sangat besar atau berdasarkan masukan dengan melakukan [perulangan](https://tlx.toki.id/courses/basic/chapters/06/lessons/A) untuk masukan dan keluaran.
+- Cara alternatif untuk menyelesaikan soal ini adalah dengan menggunakan 2D array (Baca tentang array [di sini](https://tlx.toki.id/courses/basic/chapters/09/lessons/A)), membaca 3 masukan per baris dan memasukkannya ke dalam array menurut posisi baris dan kolom, kemudian masukan ke$-j$ di baris ke$-i$ akan menjadi bilangan ke- $i$ di baris ke- $j$ di dalam keluaran. Strategi ini lebih efektif jika ukuran matriks sangat besar atau berdasarkan masukan dengan melakukan [perulangan](https://tlx.toki.id/courses/basic/chapters/06/lessons/A) untuk masukan dan keluaran.

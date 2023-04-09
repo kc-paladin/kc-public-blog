@@ -33,8 +33,8 @@ int main() {
 
 ## Materi Yang Berhubungan
     
-- [getline (string) in C++](https://www.geeksforgeeks.org/getline-string-c/)
-- [cin in C++](https://www.geeksforgeeks.org/cin-in-c/)
+- [Getline (string) in C++](https://www.geeksforgeeks.org/getline-string-c/)
+- [Cin in C++](https://www.geeksforgeeks.org/cin-in-c/)
 - [Problem with getline() after cin >>](https://www.geeksforgeeks.org/problem-with-getline-after-cin/)
 
   
