@@ -7,7 +7,7 @@ Pada soal ini Anda diminta untuk menghitung **luas segitiga** yang memiliki panj
 
 Dengan menggunakan formula berikut, luas segitiga bisa diperoleh dengan mudah.
 
-$$Luas = \frac{A \times T}{2}$$
+$$\text{Luas } \triangle = \frac{A \times T}{2}$$
 
 Namun, perhatikan bahwa meskipun masukkan yang diberikan soal merupakan bilangan bulat, hasil perhitungan mungkin berbentuk bilangan desimal. 
 
