@@ -10,7 +10,7 @@ Pada C++, kita bisa menggunakan *keyword* berupa `if`, `else if`, dan juga `else
 
 Kita akan melakukan pengecekan dengan percabangan seperti berikut ini, dengan urutan dari atas ke bawah:
 - Jika $N < 10$, maka $N$ adalah `satuan`.
-- Jika $N < 100$, maka $N$ adalah `puluhan`. Kita bisa tahu bahwa $N$ bukan `satuan` karena kita sudah melakukan pengecekan pada poin pertama. Karena $N$ tidak kurang dari 10, maka pengecekan dilanjutkan ke poin berikutnya, dan begitu seterusnya.
+- Jika $N < 100$, maka $N$ adalah `puluhan`. Kita bisa tahu bahwa $N$ bukan `satuan` karena kita sudah melakukan pengecekan pada poin pertama. Karena $N$ tidak kurang dari $10$, maka pengecekan dilanjutkan ke poin berikutnya, dan begitu seterusnya.
 - Jika $N < 1000$, maka $N$ adalah `ratusan`.
 - Jika $N < 10000$, maka $N$ adalah `ribuan`.
 - Selain itu, maka $N$ adalah `puluhribuan`. Kita tidak perlu mengecek apakah $N < 100000$ karena pada soal, nilai $N$ paling besar dijamin kurang dari seratus ribu.
@@ -46,4 +46,4 @@ int main() {
 
 ## Materi Yang Berhubungan
     
-- [C++ If ... Else](https://www.w3schools.com/cpp/cpp_conditions.asp)
+- [C++ If / Else](https://www.w3schools.com/cpp/cpp_conditions.asp)
