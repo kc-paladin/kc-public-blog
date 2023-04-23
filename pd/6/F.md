@@ -4,7 +4,7 @@ Author: Muhammad Hasan
 
 Pada soal ini kita perlu mencari faktor bilangan / pembagi dari $N$.
 
-Untuk menyelesaikan soal ini, kita cukup melakukan `for` loop dari $1$ sampai dengan $N$. Pada `for` loop tersebut, ketika kita berada pada angka $i$ kita cukup periksa apakah $i$ habis membagi $N$ dan *output* angka $i$ tersebut. 
+Untuk menyelesaikan soal ini, kita cukup melakukan `for` loop dari $N$ sampai dengan $1$. Pada `for` loop tersebut, ketika kita berada pada angka $i$ kita cukup periksa apakah $i$ habis membagi $N$ dan *output* angka $i$ tersebut. 
 
 Dalam pemrograman kita bisa cek suatu angka habis dibagi dengan angka lain dengan *Modulo* / Sisa Bagi (yakni cek apakah `N mod i == 0`, dengan kata lain cek apakah sisa bagi $N$ sama dengan $0$ ketika dibagi $i$).
 
