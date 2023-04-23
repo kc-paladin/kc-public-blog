@@ -2,13 +2,13 @@
 
 Author: Eileen Camelia Limneus
 
-Untuk persoalan ini, kita perlu memeriksa apakah bilangan yang diinput dapat terus dibagi dengan 2 hingga menjadi 1 atau tidak. Jika bisa, maka bilangan tersebut merupakan bilangan "dua pangkat". Jika tidak, maka bukan bilangan "dua pangkat".
+Untuk persoalan ini, kita perlu memeriksa apakah bilangan yang diinput dapat terus dibagi dengan $2$ hingga menjadi $1$ atau tidak. Jika bisa, maka bilangan tersebut merupakan bilangan "dua pangkat". Jika tidak, maka bukan bilangan "dua pangkat".
 
 Perhatikan bahwa kita dapat menggunakan fungsi perulangan `while` disini karena kita tidak mengetahui jumlah pasti iterasi yang perlu dilakukan. 
 
 Jika kita tahu jumlah pasti iterasi yang perlu dilakukan, maka fungsi perulangan `for` akan lebih cocok untuk digunakan.
 
-Kompleksitas Waktu: $O(log N)$
+Kompleksitas Waktu: $O(\log N)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -17,6 +17,7 @@ Kompleksitas Memori: $O(1)$
 
 ```c++
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
@@ -38,7 +39,7 @@ int main() {
 
 ## Komentar
     
-- Program ini dapat diselesaikan dengan cara lain juga seperti menggunakan sistem bilangan biner dan operasi bitwise `AND`. Caranya adalah dengan mengecek kondisi `n & (n-1) == 0` dimana hasil dari operasi tersebut akan selalu 0 pada bilangan "dua pangkat". Boleh cek materi dibawah terlebih dahulu ya!
+- Program ini dapat diselesaikan dengan cara lain juga seperti menggunakan sistem bilangan biner dan operasi bitwise `AND`. Caranya adalah dengan mengecek kondisi `n & (n-1) == 0` dimana hasil dari operasi tersebut akan selalu $0$ pada bilangan "dua pangkat". Boleh cek materi dibawah terlebih dahulu ya!
 ```c++
   if ((n & (n - 1)) == 0) {
     cout << "ya\n";

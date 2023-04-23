@@ -2,10 +2,10 @@
 
 Author: Eileen Camelia Limneus
 
-Dalam soal ini, kita dapat lihat bahwa polanya adalah mengganti setiap kelipatan dari suatu bilangan K dengan simbol `*`. Jika bukan kelipatan K, maka cukup kita cetak kembali bilangan tersebut.
+Dalam soal ini, kita dapat lihat bahwa polanya adalah mengganti setiap kelipatan dari suatu bilangan $K$ dengan simbol `*`. Jika bukan kelipatan $K$, maka cukup kita cetak kembali bilangan tersebut.
 
-Pertama, kita dapat menggunakan fungsi perulangan `for` untuk mengiterasi setiap bilangan dari 1 hingga N.
-Pada setiap iterasi, kita memeriksa apakah bilangan tersebut merupakan kelipatan dari K menggunakan operator modulo `%`.
+Pertama, kita dapat menggunakan fungsi perulangan `for` untuk mengiterasi setiap bilangan dari $1$ hingga $N$.
+Pada setiap iterasi, kita memeriksa apakah bilangan tersebut merupakan kelipatan dari $K$ menggunakan operator modulo `%`.
 Sekali lagi, jika bilangan tersebut merupakan kelipatan dari K, kita mencetak karakter `*`. Jika tidak, kita mencetak bilangan itu sendiri.
 
 Kedua, agar tidak terdapat spasi di akhir baris, kita dapat menggantinya dengan newline `\n` setelah bilangan terakhir menggunakan `if`.

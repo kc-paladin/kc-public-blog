@@ -13,7 +13,7 @@ Yang dimana, di dalam bahasa pemrograman C++, terdapat fungsi **`for`** sebagai 
 
 `for` adalah salah satu fungsi yang dapat melakukan *perulangan* ✨. 
 ```c++
-for(Pernyataan 1; Pernyataan 2; Pernyataan 3){
+for (Pernyataan 1; Pernyataan 2; Pernyataan 3) {
     // blok kode yang akan dijalankan
 }
 ```
@@ -44,12 +44,13 @@ Caranya adalah:
 
 Dalam bentuk program C++ nya dapat diketikkan sebagai:
 ```c++
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-int main(){
+int main() {
   int hasil = 0;
-  for(int i = 1; i <= 5; i++){
+  for (int i = 1; i <= 5; i++) {
     hasil = hasil + i;
   }
   cout << hasil;

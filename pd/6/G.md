@@ -13,7 +13,7 @@ Seperti yang kita tau, di dalam bahasa pemrograman C++, terdapat fungsi **`for`*
 
 `for` adalah salah satu fungsi yang dapat melakukan *perulangan* ✨. 
 ```c++
-for(Pernyataan 1; Pernyataan 2; Pernyataan 3){
+for (Pernyataan 1; Pernyataan 2; Pernyataan 3) {
     // blok kode yang akan dijalankan
 }
 ```
@@ -44,12 +44,13 @@ Caranya adalah:
 
 Dalam bentuk program C++ nya dapat diketikkan sebagai:
 ```c++
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-int main(){
+int main() {
   int hasil = 0;
-  for(int i = 1; i <= 5; i++){
+  for (int i = 1; i <= 5; i++) {
     hasil = hasil + i;
   }
   cout << hasil;
@@ -63,7 +64,7 @@ int main(){
 
 `while` adalah salah satu fungsi yang dapat melakukan *perulangan* ✨. 
 ```c++
-while(Pernyataan){
+while (Pernyataan) {
     // blok kode yang akan dijalankan
 }
 ```
@@ -91,13 +92,14 @@ Caranya adalah:
 
 Dalam bentuk program C++ nya dapat diketikkan sebagai:
 ```c++
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-int main(){
+int main() {
   int i = 1;
-  while(i <= 5){
-    if(i % 3 == 0){
+  while (i <= 5) {
+    if (i % 3 == 0) {
         cout << i;
     }
     i++;
@@ -127,6 +129,7 @@ Soal ini meminta kita untuk membantu Pak Dengklek *mencari* bilangan terbesar da
 1. Menggunakan For
 ```c++
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
@@ -135,9 +138,9 @@ int main() {
   int A = Ni, B = Ni; //A = terbesar, B = terkecil
   for (int i = 1; i < N; i++) {
     cin >> Ni;
-    if(Ni > A){ //Periksa jika Ni lebih besar dari A
+    if (Ni > A) { //Periksa jika Ni lebih besar dari A
         A = Ni; //Nilai A akan menjadi Ni
-    }else if(Ni < B){ //Periksa jika Ni lebih kecil dari B
+    } else if (Ni < B) { //Periksa jika Ni lebih kecil dari B
         B = Ni; //Nilai B akan menjadi Ni
     }
   }
@@ -149,17 +152,18 @@ int main() {
 2. Menggunakan While
 ```c++
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
   int N, Ni, i = 1;
   cin >> N >> Ni; //Ni sebagai patokan bilangan pertama
   int A = Ni, B = Ni; //A = terbesar, B = terkecil
-  while(i < N){
+  while (i < N) {
     cin >> Ni;
-    if(Ni > A){ //Periksa jika Ni lebih besar dari A
+    if (Ni > A) { //Periksa jika Ni lebih besar dari A
         A = Ni; //Nilai A akan menjadi Ni
-    }else if(Ni < B){ //Periksa jika Ni lebih kecil dari B
+    } else if (Ni < B) { //Periksa jika Ni lebih kecil dari B
         B = Ni; //Nilai B akan menjadi Ni
     }
   }

@@ -6,6 +6,7 @@ Author: Hamiz Ghani
 Pada soal ini kita diminta membuat program yang membaca input secara terus menerus hingga `EOF`, kemudian kita mencetak sebuah output yang merupakan penjumlahan bilangan pada input.
 
 Kita dapat menggunakan fungsi perulangan `while`. Selama masih ada input, tambahkan nilai variabel jumlah dengan input tersebut.
+
 ```c++
 while (cin >> x) {
   sum += x;
@@ -21,7 +22,9 @@ Kompleksitas Memori: $O(1)$
 
 ```c++
 #include <bits/stdc++.h>
+
 using namespace std;
+
 int main() {
   int x, sum = 0;
   while (cin >> x) {
@@ -31,9 +34,6 @@ int main() {
 }
 ```
 </details>
-
-
-
 
 ## Komentar
     
