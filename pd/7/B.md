@@ -4,17 +4,17 @@ Author: Eileen Camelia Limneus
 
 Setelah menganalisis contoh dalam persoalan ini, kita dapat mengetahui bahwa:
 
-- Pada baris pertama, terdapat 4 spasi diikuti oleh 1 karakter `*`.
-- Pada baris kedua, terdapat 3 spasi diikuti oleh 2 karakter `*`.
-- Pada baris ketiga, terdapat 2 spasi diikuti oleh 3 karakter `*`.
-- Pada baris keempat, terdapat 1 spasi diikuti oleh 4 karakter `*`.
-- Pada baris kelima, tidak terdapat spasi dan terdapat 5 atau N karakter `*`.
+- Pada baris pertama, terdapat $4$ spasi diikuti oleh $1$ karakter `*`.
+- Pada baris kedua, terdapat $3$ spasi diikuti oleh $2$ karakter `*`.
+- Pada baris ketiga, terdapat $2$ spasi diikuti oleh $3$ karakter `*`.
+- Pada baris keempat, terdapat $1$ spasi diikuti oleh $4$ karakter `*`.
+- Pada baris kelima, tidak terdapat spasi dan terdapat $5$ atau $N$ karakter `*`.
 
 Kita dapat menggunakan **perulangan for bersarang** untuk menyelesaikan persoalan ini. Berikut langkah - langkahnya! 👇
 
 1. Gunakan fungsi perulangan `for` untuk menghasilkan setiap baris pada pola.
 2. Di dalam perulangan `for` pertama, kita menggunakan fungsi perulangan `for` lain untuk menghasilkan pola spasi dan `*` pada setiap baris.
-3. Di dalam perulangan `for` kedua, kita melakukan pengecekan kondisi `j > i` (lihat solution code). Jika kondisi ini benar, kita menghasilkan spasi. Jika tidak, kita menghasilkan `*`.
+3. Di dalam perulangan `for` kedua, kita melakukan pengecekan kondisi $j > i$ (lihat solution code). Jika kondisi ini benar, kita menghasilkan spasi. Jika tidak, kita menghasilkan `*`.
 4. Setelah selesai menghasilkan pola spasi dan bintang untuk suatu baris, kita pindah ke baris baru menggunakan newline `\n`. 
 
 Kompleksitas Waktu: $O(N^2)$
