@@ -35,44 +35,45 @@ Soal ini meminta kita untuk membantu Pak Dengklek menentukan dari $N$ bilangan y
 
 1. Buat perulangan sebanyak $N$ kali, karena kita diminta untuk mengecek $N$ bilangan.
 2. Tambahkan variabel baru untuk setiap bilangan yang akan dimasukkan dan satu boolean untuk menjadi penentu apakah bilangan tersebut prima atau bukan.
-3. Periksa, apakah bilangan tersebut merupakan angka *1* atau bukan, karena angka *1* bukanlah bilangan prima.
-4. Karena bilangan prima hanya dapat habis dibagi 1 dan bilangan itu sendiri. Buat perulangan, yang dimana akan di cek apakah bilangan tersebut habis dibagi 2 hingga angka sebelum bilangan tersebut.
-5. Kalau ternyata ada yang membagi habis, booleannya jadi false, lalu di *break* agar tidak lanjut lagi.
-6. Periksa, apakah booleannya *true* atau *false*. Kalau true, keluarkan "YA" dan kalau false, keluarkan "BUKAN"
+3. Periksa, apakah bilangan tersebut merupakan angka $1$ atau bukan, karena angka $1$ bukanlah bilangan prima.
+4. Karena bilangan prima hanya dapat habis dibagi $1$ dan bilangan itu sendiri. Buat perulangan, yang dimana akan di cek apakah bilangan tersebut habis dibagi $2$ hingga angka sebelum bilangan tersebut.
+5. Kalau ternyata ada yang membagi habis, booleannya jadi false, lalu di `break` agar tidak lanjut lagi.
+6. Periksa, apakah booleannya `true` atau `false`. Kalau `true`, keluarkan `"YA"` dan kalau `false`, keluarkan `"BUKAN"`
 7. Nah, habis itu udaaah 😇✨.
 
 ```c++
 #include <iostream>
+
 using namespace std;
 
-int main(){
-	int N;
-	cin >> N;
-	
-	for(int i = 0; i < N; i++){
-		int A;
-		bool B = true;
-		cin >> A;
-		
-		if(A == 1){
-			cout << "BUKAN" << endl;
-		}else{
-			for(int j = 2; j < A; j++){
-				if(A % j == 0){
-					B = false;
-					break;
-				}
-			}
-			if(B){
-    			cout << "YA" << endl;
-    		}else{
-    			cout << "BUKAN" << endl;
-    		}
-		}
-	}
+int main() {
+  int N;
+  cin >> N;
+
+  for (int i = 0; i < N; i++) {
+    int A;
+    bool B = true;
+    cin >> A;
+
+    if (A == 1) {
+      cout << "BUKAN" << endl;
+    } else {
+      for (int j = 2; j < A; j++) {
+        if (A % j == 0) {
+          B = false;
+          break;
+        }
+      }
+      if (B) {
+        cout << "YA" << endl;
+      } else {
+        cout << "BUKAN" << endl;
+      }
+    }
+  }
 }
 ```
-Kompleksitas Waktu: $O(N×A)$
+Kompleksitas Waktu: $O(N \times A)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -88,45 +89,45 @@ Verdictnya menjadi "TLE" dikarenakan proses untuk menjalankan program tersebut m
 
 1. Buat perulangan sebanyak $N$ kali, karena kita diminta untuk mengecek $N$ bilangan.
 2. Tambahkan variabel baru untuk setiap bilangan yang akan dimasukkan dan satu boolean untuk menjadi penentu apakah bilangan tersebut prima atau bukan.
-3. Periksa, apakah bilangan tersebut merupakan angka *1* atau bukan, karena angka *1* bukanlah bilangan prima.
-4. Karena bilangan prima pasti tidak habis dibagi 2 hingga akar dari bilangan tersebut. Buat perulangan, yang dimana akan di cek apakah bilangan tersebut habis dibagi 2 hingga akar dari bilangan tersebut.
-5. Kalau ternyata ada yang membagi habis, booleannya jadi false, lalu di *break* agar tidak lanjut lagi.
-6. Periksa, apakah booleannya *true* atau *false*. Kalau true, keluarkan "YA" dan kalau false, keluarkan "BUKAN"
+3. Periksa, apakah bilangan tersebut merupakan angka $1$ atau bukan, karena angka $1$ bukanlah bilangan prima.
+4. Karena bilangan prima pasti tidak habis dibagi $2$ hingga akar dari bilangan tersebut. Buat perulangan, yang dimana akan di cek apakah bilangan tersebut habis dibagi $2$ hingga akar dari bilangan tersebut.
+5. Kalau ternyata ada yang membagi habis, booleannya jadi `false`, lalu di `break` agar tidak lanjut lagi.
+6. Periksa, apakah booleannya `true` atau `false`. Kalau `true`, keluarkan `"YA"` dan kalau `false`, keluarkan `"BUKAN"`
 7. Nah, habis itu udaaah 😇✨.
 
 ```c++
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
 
-int main(){
-	int N;
-	cin >> N;
-	
-	for(int i = 0; i < N; i++){
-		int A;
-		bool B = true;
-		cin >> A;
-		
-		if(A == 1){
-			cout << "BUKAN" << endl;
-		}else{
-			for(int j = 2; j < sqrt(A); j++){
-				if(A % j == 0){
-					B = false;
-					break;
-				}
-			}
-			if(B){
-    			cout << "YA" << endl;
-    		}else{
-    			cout << "BUKAN" << endl;
-    		}
-		}
-	}
+int main() {
+  int N;
+  cin >> N;
+
+  for (int i = 0; i < N; i++) {
+    int A;
+    bool B = true;
+    cin >> A;
+
+    if (A == 1) {
+      cout << "BUKAN" << endl;
+    } else {
+      for (int j = 2; j * j <= A; j++) {
+        if (A % j == 0) {
+          B = false;
+          break;
+        }
+      }
+      if (B) {
+        cout << "YA" << endl;
+      } else {
+        cout << "BUKAN" << endl;
+      }
+    }
+  }
 }
 ```
-Kompleksitas Waktu: $O(N×\sqrt{A})$
+Kompleksitas Waktu: $O(N\times \sqrt{A})$
 
 Kompleksitas Memori: $O(1)$
 
