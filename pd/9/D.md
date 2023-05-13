@@ -6,7 +6,7 @@ Pada soal ini, kita diberikan sebuah matriks berukuran $N × M$ dan kita diminta
 
 $N$ menyatakan jumlah baris pada matriks dan $M$ menyatakan jumlah kolom pada matriks.
 
-Kita akan menyimpan matriks dalam array dua dimensi, dengan $A[i][j]$ menyatakan elemen matriks pada baris ke-$i$ dan kolom ke-$j$.
+Kita akan menyimpan matriks dalam array dua dimensi, dengan $A[i][j]$ menyatakan elemen matriks pada baris $i$ dan kolom $j$.
 ```
 A[1][1] A[1][2] A[1][3] ... A[1][M]
 A[2][1] A[2][2] A[2][3] ... A[2][M]
