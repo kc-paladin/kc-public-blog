@@ -2,7 +2,7 @@
 
 Author: Evelyn
 
-Pada soal ini, kita diberikan sebuah matriks berukuran $N × M$ dan kita diminta untuk merotasikannya (memutarnya 90 derajat searah jarum jam).
+Pada soal ini, kita diberikan sebuah matriks berukuran $N \times M$ dan kita diminta untuk merotasikannya (memutarnya 90 derajat searah jarum jam).
 
 $N$ menyatakan jumlah baris pada matriks dan $M$ menyatakan jumlah kolom pada matriks.
 
@@ -17,7 +17,7 @@ A[N][1] A[N][2] A[N][3] ... A[N][M]
 
 Matriks dibaca mulai dari kiri ke kanan pada baris pertama, lalu baris kedua, dan seterusnya hingga baris terakhir.
 
-Setelah dirotasi, ukuran matriks akan berubah menjadi $M × N$.
+Setelah dirotasi, ukuran matriks akan berubah menjadi $M \times N$.
 
 Baris ke-1 akan diisi oleh elemen-elemen dari kolom ke-1 pada matriks awal. Urutan elemen dari kiri ke kanan berasal dari urutan elemen dari bawah ke atas pada matriks awal. Begitu pula untuk baris ke-2 hingga baris terakhir.
 
@@ -31,14 +31,14 @@ A[N][M] A[N - 1][M] A[N - 2][M] ... A[1][M]
 
 **Contoh**
 
-Matriks awal (Ukuran 3 × 2)
+Matriks awal (Ukuran $3 \times 2$)
 ```
 1 3
 5 2
 6 9
 ```
 
-Matriks yang telah dirotasi (Ukuran berubah menjadi 2 × 3)
+Matriks yang telah dirotasi (Ukuran berubah menjadi $2 \times 3$)
 ```
 6 5 1
 9 2 3
@@ -46,9 +46,9 @@ Matriks yang telah dirotasi (Ukuran berubah menjadi 2 × 3)
 
 Jadi, kita hanya perlu mencetak matriks yang telah disimpan dengan urutan yang telah dirotasi.
 
-Kompleksitas Waktu: $O(N × M)$
+Kompleksitas Waktu: $O(NM)$
 
-Kompleksitas Memori: $O(N × M)$
+Kompleksitas Memori: $O(NM)$
 
 
 <details>
@@ -56,20 +56,23 @@ Kompleksitas Memori: $O(N × M)$
 
 ```c++
 #include <bits/stdc++.h>
+
 using namespace std;
+
 int main() {
-  int N, M;  cin >> N >> M;
-  
+  int N, M;
+  cin >> N >> M;
+
   int A[N + 1][M + 1];
 
-  for(int i = 1; i <= N; i++) {
-    for(int j = 1; j <= M; j++) {
+  for (int i = 1; i <= N; i++) {
+    for (int j = 1; j <= M; j++) {
       cin >> A[i][j];
     }
   }
 
-  for(int i = 1; i <= M; i++) {
-    for(int j = N; j >= 1; j--) {
+  for (int i = 1; i <= M; i++) {
+    for (int j = N; j >= 1; j--) {
       cout << A[j][i] << " ";
     }
     cout << "\n";
@@ -81,15 +84,15 @@ int main() {
 </details>
 
 ## Tambahan
-Indeks terkecil pada array dimulai dari 0. Karena itu, ukuran array perlu ditambah sebesar 1 jika kita ingin memulai mengisi array dari indeks 1.
+Indeks terkecil pada array dimulai dari $0$. Karena itu, ukuran array perlu ditambah sebesar $1$ jika kita ingin memulai mengisi array dari indeks $1$.
 
 Kenapa begitu?
 
-Misalnya, kita ingin menyimpan 5 buah data pada array. Jika kita mulai menyimpannya dari indeks 0, berarti kita menyimpan pada `arr[0]`, `arr[1]`, `arr[2]`, `arr[3]`, dan `arr[4]`. Kita bisa men-*set* ukuran array tersebut sebesar 5 (indeks 0 - 4).
+Misalnya, kita ingin menyimpan $5$ buah data pada array. Jika kita mulai menyimpannya dari indeks $0$, berarti kita menyimpan pada `arr[0]`, `arr[1]`, `arr[2]`, `arr[3]`, dan `arr[4]`. Kita bisa men-*set* ukuran array tersebut sebesar $5$ (indeks $0 - 4$).
 
-Namun, jika kita ingin menyimpannya mulai dari indeks 1, kita harus men-*set* ukuran array tersebut sebesar 6 agar dapat menyimpan data-data tersebut pada `arr[1]`, `arr[2]`, `arr[3]`, `arr[4]`, dan `arr[5]`. Mengapa begitu? Jika kita men-*set* ukuran array tersebut sebesar 5, kita hanya bisa mengakses data pada indeks 0 - 4. Sedangkan ukuran 6 berarti kita bisa mengakses data pada indeks 0 - 5. Karena kita mulai dari indeks 1, maka kita akan membutuhkan indeks 5. Jadi, ukuran array yang diperlukan adalah 6.
+Namun, jika kita ingin menyimpannya mulai dari indeks $1$, kita harus men-*set* ukuran array tersebut sebesar $6$ agar dapat menyimpan data-data tersebut pada `arr[1]`, `arr[2]`, `arr[3]`, `arr[4]`, dan `arr[5]`. Mengapa begitu? Jika kita men-*set* ukuran array tersebut sebesar $5$, kita hanya bisa mengakses data pada indeks $0 - 4$. Sedangkan ukuran $6$ berarti kita bisa mengakses data pada indeks $0 - 5$. Karena kita mulai dari indeks $1$, maka kita akan membutuhkan indeks $5$. Jadi, ukuran array yang diperlukan adalah $6$.
 
-Kalau kalian mau simpan matriksnya dari indeks 0 juga boleh ya :)
+Kalau kalian mau simpan matriksnya dari indeks $0$ juga boleh ya :)
 
 ## Materi yang Berhubungan
 
