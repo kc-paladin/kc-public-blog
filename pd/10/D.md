@@ -10,7 +10,7 @@ Kalo masih belum ngerti tentang subprogram, _in a nutshell_ subprogram itu cara 
 
 "Berarti kita cuman perlu pake for loop dari 2 sampe N, cek prima per bilangan, terus cari $a$ untuk setiap bilangan prima $p$ aja yah?" - Kata terakhir dari Anon sebelum kirim kode terus kena **TLE** (yahaha langsung kena mental)
 
-Disini, untuk mengecek apakah suatu bilangan $i$ itu prima memerlukan kompleksitas waktu paling rendah $O(\sqrt{i})$ untuk batasan $i\leq N\leq10^6$. Sehingga, jika kita melakukan cek prima satu per satu dari $2$ sampai $N$, maka kompleksitas waktunya adalah $O(N\sqrt{N})$, yang akan memberikan _verdict_ **TLE** (_Time Limit Exceeded_) untuk $N>3\cdot10^5$.
+Disini, untuk mengecek apakah suatu bilangan $i$ itu prima memerlukan kompleksitas waktu paling rendah $O(\sqrt{i})$ untuk batasan $i\leq N\leq10^6$. Sehingga, jika kita melakukan cek prima satu per satu dari $2$ sampai $N$, maka kompleksitas waktunya adalah $O(N\sqrt{N})$, yang akan memberikan _verdict_ **TLE** (_Time Limit Exceeded_) untuk $N>3\times 10^5$.
 
 Trik yang dapat dilakukan adalah dengan cara mengecek apakah $i$ membagi $N$ untuk setiap $i\leq N$, kemudian cek prima jika ternyata $i$ habis membagi $N$. Jika ternyata prima, maka kita bisa mulai mencari nilai dari $a$ untuk nilai $p=i$ tersebut.
 
@@ -91,7 +91,7 @@ Terkadang kita harus mengetahui dan menggunakan beberapa trik matematika dan log
 - Tambahkan nilai $a$ dengan $1$
 - Perbarui nilai $N$ menjadi $N/i$
 
-Setelah mendapat nilai $a$, keluarkan `p^a` kemudian atur ulang nilai $a$ menjadi $0$. Karena nilai pertama $i$ yang membagi $N$ sudah pasti berupa bilangan prima, maka dijamin setelah tiap iterasi $i$, tidak ada bilangan asli $\leq i$ yang lebih dari $1$ yang habis membagi $N$. Untuk mempermudah penulisan kode, kita hanya perlu menulis subprogram bernama `pangkatTerbesar(i,N)` dengan metode _pass by reference_.
+Setelah mendapat nilai $a$, keluarkan $p^a$ kemudian atur ulang nilai $a$ menjadi $0$. Karena nilai pertama $i$ yang membagi $N$ sudah pasti berupa bilangan prima, maka dijamin setelah tiap iterasi $i$, tidak ada bilangan asli $\leq i$ yang lebih dari $1$ yang habis membagi $N$. Untuk mempermudah penulisan kode, kita hanya perlu menulis subprogram bernama `pangkatTerbesar(i,N)` dengan metode _pass by reference_.
 
 <details>
     <summary>Kode Untuk Solusi B (C++ stdio.h library)</summary>
