@@ -4,17 +4,16 @@ Author: Daniel Simanullang
 
 <!-- Masukkan penjelasan disini -->
 
-Soal ini hanya meminta kita untuk menerapkan soal klasik. Inti dari soal ini adalah kita harus menggeser suatu karakter dari string sepanjang $k$. Contohnya kita memiliki sebuah karakter __A__ pada string. Maka untuk menggeser __A__ sejauh 1 karakter kita harus mengubahnya menjadi __B__. Apabila suatu pergeseran melebihi batas (contohnya seperti menggeser __Z__), maka kita harus balik ke posisi awal, yaitu __A__. Kita dapat menggunakan operasi $S_i$ = $S_i$ + $k$ atau $S_i$ = $S_i$ + $k$ - 26 jika melebihi batas, dimana $S$ adalah string dari input.
+Soal ini hanya meminta kita untuk menerapkan soal klasik. Inti dari soal ini adalah kita harus menggeser suatu karakter dari string sepanjang $k$. Contohnya kita memiliki sebuah karakter `A` pada string. Maka untuk menggeser `A` sejauh $1$ karakter kita harus mengubahnya menjadi `B`. Apabila suatu pergeseran melebihi batas (contohnya seperti menggeser `Z`), maka kita harus balik ke posisi awal, yaitu `A`. Kita dapat menggunakan operasi $S_i = S_i + k$ atau $S_i = S_i + k - 26$ jika melebihi batas, dimana $S$ adalah string dari input.
 
-Kompleksitas Waktu: $O(S.length())$
+Kompleksitas Waktu: $O(|S|)$
 
-Kompleksitas Memori: $O(S.length())$
+Kompleksitas Memori: $O(|S|)$
 
 <details>
   <summary>Solution Code</summary>
 
 ```c++
-// Copy paste solution code yang sudah diformat
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>

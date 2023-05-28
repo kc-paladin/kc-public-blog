@@ -9,9 +9,9 @@ Author: Daniel Mangaraja Simanullang
 <!-- Masukkan penjelasan disini -->
 Pada soal ini, kita hanya perlu mengimplementasikan apa yang diminta soal. Untuk mengubah suatu karakter dari string dari kecil ke besar dan sebaliknya dapat dibaca di editorial [E. Bahasa Dengklek](https://tlx.toki.id/courses/basic/chapters/11/problems/E). Untuk mengubah gaya penulisan dari _snake_ ke _camel_, kita harus menghilangkan _underscore_ dan mengubah dari kecil ke besar. Kita bisa menghilangkan karakter tersebut dengan cara "melompat" (bisa dilihat di kode nanti). Untuk mengubah dari _camel_ ke _snake_, kita bisa mengeluarkan _underscore_ terlebih dahulu dan mengubah huruf besar ke kecil setelahnya.
 
-Kompleksitas Waktu: $O(S.length())$
+Kompleksitas Waktu: $O(|S|)$
 
-Kompleksitas Memori: $O(S.length())$
+Kompleksitas Memori: $O(|S|)$
 
 <details>
   <summary>Solution Code</summary>

@@ -3,17 +3,17 @@
 Author: Daniel Mangaraja Simanullang
 
 <!-- Masukkan penjelasan disini -->
-Pada soal ini, kita hanya perlu mengganti huruf besar menjadi kecil dan kecil menjadi besar. Salah satu cara yang bisa digunakan adalah memanfaatkan tipe data _char_ yang bersifat seperti _int_. Untuk mengubah dari besar ke kecil kita hanya perlu menggunakan
+Pada soal ini, kita hanya perlu mengganti huruf besar menjadi kecil dan kecil menjadi besar. Salah satu cara yang bisa digunakan adalah memanfaatkan tipe data _char_ yang bersifat seperti _int_. Untuk mengubah dari besar ke kecil kita hanya perlu menggunakan:
 
-$S_i$ = 'a' + $S_i$ - 'A'
+`S[i] = 'a' + S[i] - 'A'`
 
-dan dari kecil ke besar hanya
+dan dari kecil ke besar:
 
-$S_i$ = 'A' + $S_i$ - 'a'
+`S[i] = 'A' + S[i] - 'a'`
 
-Kompleksitas Waktu: $O(S.length())$
+Kompleksitas Waktu: $O(|S|)$
 
-Kompleksitas Memori: $O(S.length())$
+Kompleksitas Memori: $O(|S|)$
 
 <details>
   <summary>Solution Code</summary>

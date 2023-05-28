@@ -3,11 +3,11 @@
 Author: Daniel Mangaraja Simanullang
 
 <!-- Masukkan penjelasan disini -->
-Kita akan menggunakan operasi $find$ pada soal [B. Pembuangan String](https://tlx.toki.id/courses/basic/chapters/11/problems/B) (bisa dibaca di editorial sebelumnya). Kita akan mencari dahulu posisi $s_2$ di string $s$. Setelah itu, kita akan output seluruh karakter sebelum posisi $s_2$, output $s_3$ and $s_4$, dan sisa karakter yang tidak termaksuk dalam $s_2$ di $s$.
+Kita akan menggunakan operasi `find` pada soal [B. Pembuangan String](https://tlx.toki.id/courses/basic/chapters/11/problems/B) (bisa dibaca di editorial sebelumnya). Kita akan mencari dahulu posisi $S_2$ di string $S$. Setelah itu, kita akan output seluruh karakter sebelum posisi $S_2$, output $S_3$ and $S_4$, dan sisa karakter yang tidak termaksuk dalam $S_2$ di $S$.
 
-Kompleksitas Waktu: $O(S.length())$
+Kompleksitas Waktu: $O(|S|)$
 
-Kompleksitas Memori: $O(S.length())$
+Kompleksitas Memori: $O(|S|)$
 
 <details>
   <summary>Solution Code</summary>
