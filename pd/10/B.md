@@ -2,14 +2,14 @@
 
 Author: Hamiz Ghani
 
-Pada soal ini kita akan menerima dua buah array, sebut saja array $A$ dan array $B$ dengan index dari $1...N$. Kemudian kita akan menerima $T$ buah input dengan format :
+Pada soal ini kita akan menerima dua buah array, sebut saja array $A$ dan array $B$ dengan index dari $1 \dots N$. Kemudian kita akan menerima $T$ buah input dengan format:
 ```c++
 P x Q y
 ```
 
-untuk setiap input tersebut, kita tinggal melakukan swap pada array tipe $P$ index ke-$X$ dengan array tipe Q index ke-$Y$ dengan menggunakan fungsi `swap()`
+untuk setiap input tersebut, kita tinggal melakukan swap pada array tipe $P$ index ke-$X$ dengan array tipe $Q$ index ke-$Y$ dengan menggunakan fungsi `swap`
 
-Kompleksitas Waktu: $O(2×N+T)$
+Kompleksitas Waktu: $O(N+T)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -23,7 +23,7 @@ int n, t, x, y;
 char p, q;
 int a[1005];
 int b[1005];
-main() {
+int main() {
   cin >> n;
   for (int i = 1; i <= n; i++) cin >> a[i];
   for (int i = 1; i <= n; i++) cin >> b[i];
@@ -68,7 +68,7 @@ main() {
 -->
 ## Materi Yang Berhubungan
     
--  [swap() in C++](https://www.geeksforgeeks.org/swap-in-cpp/)
+-  [Swap in C++](https://www.geeksforgeeks.org/swap-in-cpp/)
 
 
 <!-- Tambahkan referensi link soal yang berhubungan apabila perlu

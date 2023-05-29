@@ -17,7 +17,7 @@ reverse(x) {
 }
 ```
 
-Kompleksitas Waktu: $O(log (A)+ log (B))$
+Kompleksitas Waktu: $O(\log A + \log B)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -37,7 +37,7 @@ int reverse(int x) {
   }
   return ret;
 }
-main() {
+int main() {
   cin >> a >> b;
   c = reverse(a) + reverse(b);
   cout << reverse(c) << endl;

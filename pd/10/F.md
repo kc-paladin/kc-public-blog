@@ -2,9 +2,11 @@
 
 Author: Hamiz Ghani
 
-Pada soal ini kita akan menerima 2 buah array $X$ dan $Y$ yang dijadikan sebagai faktor acuan untuk $N$ buah murid. Kemudian didefinisikan $T[i][j] = abs(X[j]-X[i])^d + abs(Y[j]-Y[i])^d$ sebagai nilai kedekatan antara murid ke-i dan murid ke-j  dan $d$ merupakan konstanta yang ditentukan oleh Pak Dengklek
+Pada soal ini kita akan menerima 2 buah array $X$ dan $Y$ yang dijadikan sebagai faktor acuan untuk $N$ buah murid. Kemudian didefinisikan $T[i][j] = abs(X[j]-X[i])^d + abs(Y[j]-Y[i])^d$ sebagai nilai kedekatan antara murid ke-$i$ dan murid ke-$j$ dan $d$ merupakan konstanta yang ditentukan oleh Pak Dengklek
 
-Kita dapat melakukan cek pada setiap $T[i][j]$ dimana $1≤i,j≤N$. Disini saya membuat 2 buah variabel baru yaitu $ansmin$ yang mencatat nilai paling minimal untuk $T[i][j]$ serta $ansmax$ yang mencatat nilai maksimalnya. Perlu diingat bahwa kita tidak akan melakukan pengecekan pada $T[i][j]$ untuk suatu $i=j$ karena tidak mungkin murid tersebut mempunyai nilai kedekatan dengan dirinya sendiri.
+Kita dapat melakukan cek pada setiap $T[i][j]$ dimana $1≤i,j≤N$. Disini saya membuat 2 buah variabel baru yaitu `ansmin` yang mencatat nilai paling minimal untuk $T[i][j]$ serta `ansmax` yang mencatat nilai maksimalnya. Perlu diingat bahwa kita tidak akan melakukan pengecekan pada $T[i][j]$ untuk suatu $i=j$ karena tidak mungkin murid tersebut mempunyai nilai kedekatan dengan dirinya sendiri.
+
+Kita juga dapat embuat suatu fungsi `power(x,y)` yang akan mengembalikan nilai dari $X^d$. Fungsi ini akan membantu untuk menghitung nilai dari $T[i][j] = abs(X[j]-X[i])^d + abs(Y[j]-Y[i])^d$
 
 Kompleksitas Waktu: $O(N^2)$
 
@@ -27,7 +29,7 @@ int power(int x, int y) {
   for (int i = 1; i <= y; i++) temp *= x;
   return temp;
 }
-main() {
+int main() {
   cin >> n >> d;
   for (int i = 1; i <= n; i++) {
     cin >> x[i] >> y[i];
@@ -45,11 +47,6 @@ main() {
 ```
 
 </details>
-
-
-Saya juga membuat suatu fungsi `power(x,y)` yang akan mengembalikan nilai dari $X^d$. Fungsi ini akan membantu untuk menghitung nilai dari $T[i][j] = abs(X[j]-X[i])^d + abs(Y[j]-Y[i])^d$
-
-
 
 <!-- Tambahkan komentar apabila perlu
 -->
