@@ -73,3 +73,7 @@ int main() {
 ## Materi Yang Berhubungan
 
 - [Binary Exponentiation](https://cp-algorithms.com/algebra/binary-exp.html)
+
+## Soal Yang Berhubungan
+
+- [Hadiah](https://tlx.toki.id/courses/competitive/chapters/05/problems/C)
