@@ -12,7 +12,7 @@ Disini dapat dilihat bahwa kita cukup melakukan perpangkatan sebanyak $log B$ ka
 
 Namun permasalahan selanjutnya adalah apabila nilai akhir (tanpa di modulo) melebihi $999999$ maka kita perlu menambahkan angka $0$ di depan bilangan hingga $6$ digit, tetapi jika tidak melebihi $999999$ kita tidak diminta untuk menambahkan angka $0$. Untuk mengatasi permasalahan ini kita dapat mengecek apabila sewaktu-waktu hasil pemangkatan kita melebihi $999999$, alias operasi modulonya "berfungsi".
 
-Kompleksitas Waktu: $O(log B)$
+Kompleksitas Waktu: $O(\log B)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -68,7 +68,7 @@ int main() {
 
 ## Komentar
 
-- Selain metode di atas, terdapat juga satu teknik lain yang sering digunakan untuk melakukan pemangkatan bilangan besar dengan memanfaatkan basis biner. Silahkan kunjungi referensi di bawah jika ingin mempelajari lebih lanjut.
+- Selain metode di atas, terdapat juga satu teknik lain yang umum digunakan untuk melakukan pemangkatan bilangan besar dengan memanfaatkan basis biner. Silahkan kunjungi referensi di bawah jika ingin mempelajari lebih lanjut.
 
 ## Materi Yang Berhubungan
 
