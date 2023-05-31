@@ -2,7 +2,7 @@
 
 Author: Andreas Timothy
 
-Perhatikan sifat berikut.
+Perhatikan sifat berikut:
 
 $$
 A^{B^C} = A^{B \times B \times ... \times B} = (((A^B)^B)...)^B
@@ -52,3 +52,7 @@ int main() {
 ## Materi Yang Berhubungan
 
 - [Binary Exponentiation](https://cp-algorithms.com/algebra/binary-exp.html)
+
+## Soal Yang Berhubungan
+
+- [Pangkat Besar](https://tlx.toki.id/courses/competitive/chapters/05/problems/B)
