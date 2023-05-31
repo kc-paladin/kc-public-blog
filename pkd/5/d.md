@@ -2,15 +2,15 @@
 
 Author: Andreas Timothy
 
-Untuk menyelesaikan problem ini, kita dapat membuat array _prefix sum_ dimana $pref_i$ berisi jumlah hewan dari jenis ke $1$ sampai $i$ untuk setiap $1 \leq i \leq N$. Secara formal dapat didefinisikan sebagai berikut.
+Untuk menyelesaikan problem ini, kita dapat membuat array _prefix sum_ dimana $pref_i$ berisi jumlah hewan dari jenis ke $1$ sampai $i$ untuk setiap $1 \leq i \leq N$. Secara formal dapat didefinisikan sebagai berikut:
 
 $$
 pref[i] = \displaystyle\sum_{j = 1}^i X[j]
 $$
 
-Perhatikan bahwa jenis hewan yang berada tepat pada baris ke-$Y$ adalah nilai $i$ terkecil dimana $pref_i \geq Y$. Perhatikan juga bahwa array $pref$ pasti terurut menaik. Oleh karena itu kita dapat melakukan _binary search_ untuk mencari nilai $i$.
+Perhatikan bahwa jenis hewan yang berada tepat pada baris ke-$Y$ adalah nilai $i$ terkecil dimana $pref_i \geq Y$. Perhatikan juga bahwa array $pref$ pasti terurut menaik. Oleh karena itu kita dapat melakukan _binary search_ untuk mencari nilai $i$ dengan cepat.
 
-Kompleksitas Waktu: $O(Q log N)$
+Kompleksitas Waktu: $O(Q \log N)$
 
 Kompleksitas Memori: $O(N)$
 
