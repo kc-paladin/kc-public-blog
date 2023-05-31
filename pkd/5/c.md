@@ -10,7 +10,7 @@ $$
 
 dengan $B$-nya sebanyak $C$ kali. Oleh karena itu, kita dapat melakukan iterasi sebanyak $C$ untuk memangkatkan nilai $A$. Pemangkatan dilakukan dengan teknik pemangkatan cepat seperti pada problem [sebelumnya](https://tlx.toki.id/courses/competitive/chapters/05/problems/B).
 
-Kompleksitas Waktu: $O(C log B)$
+Kompleksitas Waktu: $O(C \log B)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -47,7 +47,7 @@ int main() {
 
 ## Komentar
 
-- Perhatikan bahwa nilai yang diminta adalah $(\mod N) + 1$, bukan $\mod (N + 1)$
+- Perhatikan bahwa nilai yang diminta adalah $(A^{B^C} \mod N) + 1$, bukan $A^{B^C} \mod (N + 1)$
 
 ## Materi Yang Berhubungan
 
