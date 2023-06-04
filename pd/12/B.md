@@ -5,16 +5,16 @@ Author: Hamiz Ghani
 Pada soal ini kita akan menerima suatu bilangan bulat $N$. Kemudian kita akan output hasil dari $N!!$ yang dapat didefinisikan oleh pseudocode berikut :
 ```c++
 function f(n)
-    if (n=1) 
+    if (n = 1) 
         return 1
     else if (n mod 2 = 0) 
-        return (n/2) * f(n-1)
+        return (n / 2) * f(n - 1)
     else
-        return (n) * f(n-1) 
+        return (n) * f(n - 1) 
     endif
 endfunction
 ```
-Dalam fungsi tersebut $f(n)$ akan mengembalikan 3 nilai. Apabila n=1, menandakan bahwa kita sudah mengalikan bilangan terakhir, maka `return 1`.  Apabila n bilangan ganjil `return f(n-1)*n`. Apabila n bilangan genap `return f(n-1)*n/2`.
+Dalam fungsi tersebut $f(n)$ akan mengembalikan $3$ nilai. Apabila $n=1$, menandakan bahwa kita sudah mengalikan bilangan terakhir, maka `return 1`.  Apabila $n$ bilangan ganjil `return f(n - 1) * n`. Apabila $n$ bilangan genap `return f(n - 1) * (n / 2)`.
 
 Kompleksitas Waktu: $O(N)$
 

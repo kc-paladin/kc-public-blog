@@ -2,20 +2,21 @@
 
 Author: Hamiz Ghani
 
-Pada soal ini kita akan menerima suatu string $S$. Kita akan menentukan apakah $S$ merupakan string palindrome atau bukan. Kita dapat cek untuk setiap karakter $S[i], 1≤i≤S.length()/2$ dan membandingkannya dengan $S[(S.length()-i)-1]$. Apabila ditemukan $i$ dimana $S[i]≠S[(s.length()-i)-1]$ maka dipastikan string tersebut bukan merupakan string palindrom. 
+Pada soal ini kita akan menerima suatu string $S$. Kita akan menentukan apakah $S$ merupakan string palindrome atau bukan. Katakanlah $N$ merupakan panjang dari string $S$. Kita dapat cek untuk setiap karakter $S[i], 1≤i≤N/2$ dan membandingkannya dengan $S[N-i-1]$. Apabila ditemukan $i$ dimana $S[i] \neq S[N-i-1]$ maka dipastikan string tersebut bukan merupakan string palindrom.
+
 ```c++
 bool palindrome = true;
-    for (int i = 0; i <= s.length() / 2; i++) {
-        if (s[i] != s[(s.length() - i) - 1]) {
-            palindrome = false;
-        }
+for (int i = 0; i <= s.length() / 2; i++) {
+    if (s[i] != s[(s.length() - i) - 1]) {
+        palindrome = false;
     }
+}
 ```
-Dalam pseudocode di atas $palindrome$ merupakan tipe data $bool$ yang akan bernilai $1$ apabila string tersebut merupakan bilangan palindrome dan bernilai $0$ jika sebaliknya.
+Dalam pseudocode di atas $palindrome$ merupakan tipe data `bool` yang akan bernilai $1$ apabila string tersebut merupakan bilangan palindrome dan bernilai $0$ jika sebaliknya.
 
-Kompleksitas Waktu: $O(s.length()/2)$
+Kompleksitas Waktu: $O(|S|)$
 
-Kompleksitas Memori: $O(1)$
+Kompleksitas Memori: $O(|S|)$
 
 <details>
   <summary>Solution Code</summary>
