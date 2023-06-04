@@ -1,4 +1,4 @@
-# [Faktorial Ganjil-Genap](https://tlx.toki.id/courses/basic/chapters/12/problems/B)
+# [B. Faktorial Ganjil-Genap](https://tlx.toki.id/courses/basic/chapters/12/problems/B)
 
 Author: Hamiz Ghani
 

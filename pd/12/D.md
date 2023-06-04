@@ -1,4 +1,4 @@
-# [Kasur Rusak](https://tlx.toki.id/courses/basic/chapters/12/problems/D)
+# [D. Kasur Rusak](https://tlx.toki.id/courses/basic/chapters/12/problems/D)
 
 Author: Hamiz Ghani
 
