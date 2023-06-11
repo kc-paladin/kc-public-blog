@@ -6,7 +6,7 @@ Pada soal ini, kita diberikan sebuah matriks berukuran $R \times C$ yang harus d
 
 [![Quadtree-I.jpg](https://i.postimg.cc/Xq3BybX9/Quadtree-I.jpg)](https://postimg.cc/cg9LVPRJ)
 
-Dalam solusi ini, kita akan membuat 2 fungsi, yaitu:
+Dalam solusi ini, kita akan membuat $2$ fungsi, yaitu:
 - `quadtree(x1, y1, x2, y2, s)` yang akan memproses pembagian matriks ke $4$ kuadran dan menyimpan kode berupa string `s` jika submatriks $(x_1, y_1)$ $(x_2, y_2)$ homogen yang bernilai $1$
 - `homogen(x1, y1, x2, y2)` yang akan mengembalikan nilai `true` jika semua elemen yang terletak diantara titik koordinat tersebut homogen dan `false` jika sebaliknya.
 
@@ -106,9 +106,9 @@ int main(){
 ## Komentar
 - Buat temen-temen yang belum tau `vector` itu apa, _basically_ vector itu array yang fleksibel dan sizenya gak perlu dideclare duluan. Kita bisa menambahkan elemen ke belakang vector dengan menggunakan fungsi `.push_back()`.
 - Fun fact: Kenapa ya ukuran matriksnya harus $2^p \times 2^p$ 🤔? _Notice that_ setiap submatriks yang bukan homogen harus dibagi menjadi $4$ kuadran sama besar. Artinya, kita harus membagi $2$ sumbu-$x$ dan sumbu-$y$ di titik tengahnya. Jika ukuran matriksnya tidak tepat $2^p$, maka suatu saat matriks tersebut tidak bisa dibagi $2$ lagi! Hal ini bisa dilihat dari faktorisasi primanya. Sebagai contoh, coba bandingkan $12$ dengan $8$:  
-$12 = 2^2 \times 3$  
-$8 = 2^3$  
-Jika $12$ dibagi $2$ sampai tidak bisa lagi dibagi dengan $2$, maka sisanya adalah $3$. Sedangkan, jika $8$ dibagi $2$ sampai tidak bisa lagi dibagi dengan $2$, maka sisanya adalah $1$. Jika ukuran sekarang adalah $3$ dan matriksnya belum homogen, maka matriks tersebut tidak bisa dibagi $2$ lagi (karena ganjil). Nah, jika ukuran matriks sekarang adalah $1$, maka matriks tersebut *pasti* homogen (kan elementnya cuma 1 :D).
+  - $12 = 2^2 \times 3$  
+  - $8 = 2^3$  
+- Jika $12$ dibagi $2$ sampai tidak bisa lagi dibagi dengan $2$, maka sisanya adalah $3$. Sedangkan, jika $8$ dibagi $2$ sampai tidak bisa lagi dibagi dengan $2$, maka sisanya adalah $1$. Jika ukuran sekarang adalah $3$ dan matriksnya belum homogen, maka matriks tersebut tidak bisa dibagi $2$ lagi (karena ganjil). Nah, jika ukuran matriks sekarang adalah $1$, maka matriks tersebut *pasti* homogen (kan elementnya cuma 1 :D).
 
 ## Materi Yang Berhubungan
 - [Vector C++](https://www.geeksforgeeks.org/vector-in-cpp-stl/)

@@ -2,7 +2,7 @@
 
 Author: Hamiz Ghani
 
-Pada soal ini kita akan menerima dua buah bilangan $N$ dan $K$. Kita akan mengeluarkan $K$ buah bilangan bulat yang berada di antara $1...N$ mulai dari yang paling kecil sampai dengan yang paling besar. Dengan kata lain, kita akan mencetak kombinasi $K$ buah bilangan dari $1$ sampai $N$ secara terurut.
+Pada soal ini kita akan menerima dua buah bilangan $N$ dan $K$. Kita akan mengeluarkan $K$ buah bilangan bulat yang berada di antara $1 \dots N$ mulai dari yang paling kecil sampai dengan yang paling besar. Dengan kata lain, kita akan mencetak kombinasi $K$ buah bilangan dari $1$ sampai $N$ secara terurut.
 
 Definisikan fungsi $f(x,y)$ dimana $x$ merupakan index urutan dari $K$ buah bilangan dan $y$ menandakan bilangan terkecil yang dapat kita ambil.
 
@@ -24,12 +24,12 @@ void f(int x, int y) {
     }
 }
 ```
-Kita akan memanggil $f(0,1)$ untuk setiap kasus. Apabila $x<K$ kita akan melakukan for loop dari bilangan terkecil yang dapat kita ambil yaitu $y$ sampai dengan $N$, apabila kita mengambil bilangan $i$ untuk $y≤i≤N$, maka bilangan terkecil yang dapat kita ambil selanjutnya adalah $i+1$ dan tentu saja index untuk fungsi selanjutnya akan bertambah yaitu menjadi $x+1$ sehingga kita akan memanggil $f(x+1,i+1)$ 
+Kita akan memanggil $f(0,1)$ untuk setiap kasus. Apabila $x<K$ kita akan melakukan for loop dari bilangan terkecil yang dapat kita ambil yaitu $y$ sampai dengan $N$, apabila kita mengambil bilangan $i$ untuk $y \leq i \leq N$, maka bilangan terkecil yang dapat kita ambil selanjutnya adalah $i+1$ dan tentu saja index untuk fungsi selanjutnya akan bertambah yaitu menjadi $x+1$ sehingga kita akan memanggil $f(x+1,i+1)$ 
 
 Perhatikan batasan fungsi yaitu apabila $f(x,y)$ dimana $x>K$ atau $y>N+1$ maka kita harus menghentikan fungsi tersebut. Kenapa batasannya $y>N+1$ dan bukan $y>N$, karena apabila kita mengambil bilangan terakhir untuk suatu $f(k-1,N)$ transisi selanjutnya adalah $f(k,N+1)$ dengan bilangan yang terakhir diambil adalah $N$ sehingga masih terhitung valid.
 
 
-Kompleksitas Waktu: $O(N!/K!(N-K)!)$
+Kompleksitas Waktu: $O(N!)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -67,26 +67,6 @@ main()
 ```
 </details>
 
-
-
-<!-- Tambahkan komentar apabila perlu
--->
-## Komentar
-
-- Kompleksitas dari soal ini adalah kombinasi $K$ bilangan dari $N$ bilangan atau dapat ditulis $C(n,k)$
-
-
-<!-- Tambahkan referensi link materi yang berhubungan apabila perlu
--->
 ## Materi Yang Berhubungan
     
 -  [cpp program combination list numbers](https://www.sanfoundry.com/cpp-program-possible-combinations-list-numbers/)
-
-<!-- Tambahkan referensi link soal yang berhubungan apabila perlu
-
-## Soal Yang Berhubungan
-    
-- [Nama Soal 1](link-soal)
-- [Nama Soal II](link-soal)
-
--->
