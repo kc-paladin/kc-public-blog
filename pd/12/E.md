@@ -5,7 +5,8 @@ Author: Hamiz Ghani
 Pada soal ini kita akan menerima suatu bilangan bulat $N$. Kemudian kita akan mengeluarkan output berupa bilangan $N$ yang direpresentasikan dalam bentuk biner.
 Batasan nilai $N$ pada kasus ini adalah $10^9$. 
 
-Kita dapat menggunakan sebuah pointer yang kita beri nama $idx$.
+Kita dapat menggunakan sebuah pointer yang kita beri nama `idx`.
+
 ```c++
 int idx = 30;
 while (n != 0) {
@@ -17,9 +18,11 @@ while (n != 0) {
     idx--;
 }
 ```
-$idx$ memiliki nilai awal 30, karena nilai dari `pow(2,30)` lebih dari $10^9$. Apabila ditemukan suatu nilai $idx$ dimana $pow(2,idx)≤N$ maka $a[idx]=1$, kemudian kurangi nilai $N$ dengan $pow(2,idx)$. Setelah itu lanjutkan proses rekursi.
+`idx` memiliki nilai awal $30$, karena nilai dari $2^{30}$ lebih dari $10^9$. Apabila ditemukan suatu nilai `idx` dimana $2^{idx}≤N$ maka `a[idx]=1`, kemudian kurangi nilai $N$ dengan $2^{idx}$.
 
-Kompleksitas Waktu: $O(30)$
+Setelah itu lanjutkan proses rekursi.
+
+Kompleksitas Waktu: $O(\log N)$
 
 Kompleksitas Memori: $O(1)$
 
@@ -57,8 +60,8 @@ main() {
 -->
 ## Komentar
 
-- fungsi `pow(x,y)` merupakan suatu fungsi bawaan dari C++ yang akan mengembalikan dari $x^y$.
-
+- Fungsi `pow(x, y)` merupakan suatu fungsi bawaan dari C++ yang akan mengembalikan dari $x^y$.
+- Hati-hati dengan presisi fungsi `pow(x, y)`
 
 <!-- Tambahkan referensi link materi yang berhubungan apabila perlu
 
