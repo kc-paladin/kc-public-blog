@@ -1,4 +1,4 @@
-# [E. Komposisi Fungsi](https://tlx.toki.id/courses/basic/chapters/10/problems/E)
+# [C. Komposisi Fungsi II](https://tlx.toki.id/courses/basic/chapters/12/problems/C)
 
 Author: Muhammad Hasan
 
