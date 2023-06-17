@@ -10,8 +10,8 @@ Maka, apabila diberikan string $P$, kita dapat mengecek apakah string $P$ dapat 
 
 - Apabila panjang $P$ terlalu kecil atau $|P|<|S|-1$ maka $P$ tidak mungkin dicocokkan dengan string $S$.
 - Dedifinisikan $X =$ (Prefix dari $P$ dengan panjang $pos - 1$) $+$ `"*"` $+$ (Suffix dari $P$ dengan panjang $|S|- pos)$
-- Maka string $P$ dapat dicocokkan dengan string $S$ jika dan hanya jika $X=S$.
-- Kita dapat gunakan utilitas `substr` pada C++ untuk mendapatkan hal ini.
+- Maka string $P$ dapat dicocokkan dengan string $S$ jika dan hanya jika $S=X$.
+- Kita dapat gunakan utilitas `substr` pada C++ untuk mendapatkan prefix / suffix suatu string.
 
 Kompleksitas Waktu: $O(|S| + T \times |P|)$ dengan $T = $ banyaknya kasus uji 
 
