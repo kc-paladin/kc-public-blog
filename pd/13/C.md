@@ -1,19 +1,20 @@
-# [Permutasi Zig-Zag](https://tlx.toki.id/courses/basic/chapters/13/problems/C)
+# [C. Permutasi Zig-Zag](https://tlx.toki.id/courses/basic/chapters/13/problems/C)
 
 Author: Hamiz Ghani
 
-Pada soal ini kita akan menuliskan setiap permutasi dari digit $1,2,..,N$ yang memenuhi kondisi berikut :
+Pada soal ini kita akan menuliskan setiap permutasi dari digit $1,2,\dots,N$ yang memenuhi kondisi berikut :
 
 - Digit yang di tengah lebih kecil daripada kedua digit lainnya.
 - Digit yang di tengah lebih besar daripada kedua digit lainnya.
 
-Atau dapat kita tuliskan, untuk setiap $a[x]$ dimana $1≤x≤N-1$. $a[x]$ selalu memenuhi salah satu dibawah ini :
+Atau dapat kita tuliskan, untuk setiap $a[x]$ dimana $1≤x≤N-1$, $a[x]$ selalu memenuhi salah satu dibawah ini :
 - $a[x-1]>a[x]$ dan $a[x]<a[x+1]$
 - $a[x-1]<a[x]$ dan $a[x]>a[x+1]$
 
 Apabila untuk suatu permutasiterdapat $a[x]$ ang tidak memenuhi kondisi diatas, maka dipastikan permutasi tersebut bukan permutasi zig-zag
 
-Kita dapat menggunakan fungsi rekursi yang akan mencetak semua permutasi yang kita definisikan sebagai `perm(x,n)` dibawah ini
+Kita dapat menggunakan fungsi rekursi yang akan mencetak semua permutasi yang kita definisikan sebagai `perm(x,n)` dibawah ini:
+
 ```c++
 void perm(int n, int x) {
   if (x == n) {
@@ -41,7 +42,8 @@ Kemudian kita akan menambahkan suatu looping yang berguna untuk mengecek apakah 
 
 untuk suatu $i$, $1≤i≤N$.
 
-Sehingga didapatkan fungsi akhir `perm(n,x)` sebagai berikut :
+Sehingga didapatkan fungsi akhir `perm(n,x)` sebagai berikut:
+
 ```c++
 void perm(int n, int x) {
   if (x == n) {
@@ -69,7 +71,7 @@ void perm(int n, int x) {
 
 `perm(n,x)` memiliki dua statement
 - $n$, yaitu sampai bilangan ke berapa permutasi di-generate
--$x$, yaitu sudah sampai bilangan ke berapa di permutasi tersebut
+- $x$, yaitu sudah sampai bilangan ke berapa di permutasi tersebut
 
 Apabila $x=n$ maka kita akan melanjutkan ke pengecekan.
 

@@ -2,11 +2,9 @@
 
 Author: Yose Yehezkiel Maranata
 
-Halo semua :wave: 
+Halo semua!
 
-Di blog ini kita akan belajar membuat algorithm untuk permainan Jawbreaker! :hushed:
-
-Pertama-tama, pastikan kalian sudah membaca soalnya dengan benar ya! Kebanyakan gagal nyelesaiin soal ini karena salah baca soal. :wink:
+Pertama-tama, pastikan kalian sudah membaca soalnya dengan benar ya! Kebanyakan gagal nyelesaiin soal ini karena salah baca soal.
 
 Selama ada suatu baris yang penuh terisi, kita akan terus-menerus meruntuhkan. Kita akan gunakan `while` sambil memeriksa apakah ada suatu baris yang penuh terisi.
 

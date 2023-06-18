@@ -2,12 +2,12 @@
 
 Author: Muhammad Hasan
 
-Kita dapat definisikan fungsi $F(x, k)$ sebagai berikut:
+Kita dapat definisikan fungsi $f(x, k)$ sebagai berikut:
 
-- Apabila $k=1$ maka $F(x, k) = |Ax + B|$
-- Apabila $k>1$ maka $F(x, k) = |A \times F(x, k - 1) + B|$
+- Apabila $k=1$ maka $f(x, k) = |Ax + B|$
+- Apabila $k>1$ maka $f(x, k) = |A \times f(x, k - 1) + B|$
 
-Sehingga kita cukup implementasi fungsi $F(x, k)$ tersebut.
+Sehingga kita cukup implementasi fungsi $f(x, k)$ tersebut.
 
 
 Kompleksitas Waktu: $O(K)$
@@ -24,11 +24,11 @@ using namespace std;
 
 int A, B, K, X;
 
-int F(int k) {
+int f(int k) {
   if (k == 1) {
     return abs(A * X + B);
   }
-  return abs(A * F(k - 1) + B);
+  return abs(A * f(k - 1) + B);
 }
 
 int main() {
@@ -37,7 +37,7 @@ int main() {
   cout.tie(0);
 
   cin >> A >> B >> K >> X;
-  cout << F(K) << '\n';
+  cout << f(K) << '\n';
 
   return 0;
 }
