@@ -35,6 +35,10 @@ _Base case_ yang ada adalah $f(x, x) = 0$ ($y<x$ tidak mungkin).
 
 Untuk $Q = 2$, hal yang sama dapat dilakukan, tetapi dengan membuat _array_ untuk menyimpan jumlah cara. Saat awal kita akan memeriksa semua $pos$, sehingga awalnya jawaban tak terhingga (bilangan besar) dan ada nol cara. Lalu, jika $pos$ saat ini lebih baik dari sebelumnya (lebih sedikit langkah), kita buat ini jawabannya dan banyaknya cara adalah perkalian banyaknya cara dari $f(x, pos)$ dan $f(pos+1, y)$. Jika solusi ini sama baiknya (jumlah langkah sama persis), kita hitung banyak cara yang mungkin dan tambahkan kedalam banyak cara sekarang. Jika solusi ini lebih buruk (lebih banyak langkah), ya kita abaikan saja. 
 
+Kompleksitas Waktu: $O(N^3)$ untuk pertanyaan 1 dan 2, dan $O(N^2)$ untuk pertanyaan 3 (Maka _worst-case time complexity_ yang didapat adalah $O(N^3)$)
+
+Kompleksitas Memori: $O(N^2)$ untuk pertanyaan 1 dan 2, dan $O(N)$ untuk pertanyaan 3 (Maka _worst-case memory complexity_ yang didapat adalah $O(N^2)$)
+
 <details>
   <summary>Solution Code</summary>
 
