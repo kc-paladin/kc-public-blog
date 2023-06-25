@@ -10,13 +10,11 @@ Problem ini cukup mudah diselesaikan sebagaimana kita mengerjakannya secara manu
 
 Untuk melakukan ketiga proses di atas kita hanya memerlukan $\text{FPB}$ dan $\text{KPK}$. Untuk mencari nilai $\text{FPB}$ kita bisa menggunakan fungsi `__gcd` bawaan C++ atau dengan **algoritma euclid**, sedangkan nilai $\text{KPK}$ dapat diperoleh dengan sifat berikut:
 
-$KPK(a, b) = \frac{a \times b}{FPB(a, b)}$
+$$KPK(a, b) = \frac{a \times b}{FPB(a, b)}$$
 
-Kompleksitas Waktu: $O(log(N))$
+Kompleksitas Waktu: $O(\log N)$
 
 Kompleksitas Memori: $O(1)$
-
-> Catatan: $N$ sebagai variabel-variabel yang dipakai dalam program
 
 <details>
   <summary>Solution Code</summary>
