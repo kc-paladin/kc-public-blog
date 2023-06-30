@@ -27,51 +27,51 @@ using namespace std;
 
 int n, m;
 
-int dr[4] = {0,0,1,-1};
-int dc[4] = {1,-1,0,0};
+int dr[4] = {0, 0, 1, -1};
+int dc[4] = {1, -1, 0, 0};
 
-bool inside(int x, int y) {
-    return x>=0&&x<n&&y>=0&&y<m;
-}
+bool inside(int x, int y) { return x >= 0 && x < n && y >= 0 && y < m; }
 vector<vector<int>> grid;
 vector<vector<bool>> vis;
 int klik(int i, int j, int warna) {
-    vis[i][j] = 1;
-    int tot = 1;
-    
-    for(int k=0;k<4;k++) {
-        int tr = i+dr[k], tc = j+dc[k]; // tr, tc  -> koordinat tujuan
+  vis[i][j] = 1;
+  int tot = 1;
 
-        if(!inside(tr,tc)) continue; // cek1 : (tr,tc) berada di dalam grid
+  for (int k = 0; k < 4; k++) {
+    int tr = i + dr[k], tc = j + dc[k];  // tr, tc  -> koordinat tujuan
 
-        if(vis[tr][tc]) continue; // cek2 : (tr,tc) belum pernah dikunjungi
+    if (!inside(tr, tc)) continue;  // cek1 : (tr,tc) berada di dalam grid
 
-        if(grid[tr][tc]!=warna) continue; //cek3 : warna (tr,tc) sama dengan koordinat asal
+    if (vis[tr][tc]) continue;  // cek2 : (tr,tc) belum pernah dikunjungi
 
-        tot += klik(tr, tc, warna);
-    }
-    return tot;
+    if (grid[tr][tc] != warna)
+      continue;  // cek3 : warna (tr,tc) sama dengan koordinat asal
+
+    tot += klik(tr, tc, warna);
+  }
+  return tot;
 }
 
-int main(){ 
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    cin >> n >> m;
-    grid = vector<vector<int>>(n, vector<int>(m) );
-    vis = vector<vector<bool>>(n, vector<bool>(m, 0));
-    for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) cin >> grid[i][j];
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cin >> n >> m;
+  grid = vector<vector<int>>(n, vector<int>(m));
+  vis = vector<vector<bool>>(n, vector<bool>(m, 0));
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) cin >> grid[i][j];
+  }
+  // tambahkan bruteforce untuk mengecek setiap floodfill yang dilakukan
+  int mx = 0;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      if (vis[i][j]) continue;
+      int tot = klik(i, j, grid[i][j]);
+      mx = max(mx, tot);
     }
-    // tambahkan bruteforce untuk mengecek setiap floodfill yang dilakukan
-    int mx = 0;
-    for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) {
-            if(vis[i][j]) continue;
-            int tot = klik(i,j,grid[i][j]);
-            mx = max(mx, tot);
-        }
-    }
-    int ans = mx * (mx-1);
-    cout << ans << endl;
+  }
+  int ans = mx * (mx - 1);
+  cout << ans << endl;
 }
 ```
 </details>
