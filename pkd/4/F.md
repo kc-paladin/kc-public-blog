@@ -1,16 +1,16 @@
-# [F. Jawbreaker III: Cari Terbesar dan Runtuhkan!](https://tlx.toki.id/courses/competitive/chapters/04/problems/E)
+# [F. Jawbreaker III: Cari Terbesar dan Runtuhkan!](https://tlx.toki.id/courses/competitive/chapters/04/problems/F)
 
 Author: Yose Yehezkiel Maranata
 
 Halo semua! :D
 
-Pastikan dahulu kalian sudah `AC` soal [Jawbreaker II: Cari Terbesar](https://tlx.toki.id/courses/competitive/chapters/04/problems/E) dan [Runtuh](https://tlx.toki.id/courses/competitive/chapters/01/problems/B) dulu ya. Sesuai judul soal, setelah menemukan yang terbesar kita akan runtuhkan! 
+Pastikan dahulu kalian sudah `AC` soal [Jawbreaker II: Cari Terbesar](https://tlx.toki.id/courses/competitive/chapters/04/problems/E) dan [Runtuh](https://tlx.toki.id/courses/competitive/chapters/01/problems/B) dulu ya. Sesuai judul soal, setelah menemukan yang terbesar, kita akan runtuhkan! 
 
-Lakukan hal yang sama dengan Cari terbesar yaitu bruteforce dahulu setiap kemungkinan floodfill.
+Lakukan hal yang sama dengan cari terbesar yaitu bruteforce dahulu setiap kemungkinan floodfill.
 
-Setelah itu hilangkan floodfill yang paling besar. Di contoh kode di bawah nilai dari `grid[x][y]` akan dirubah menjadi 0 artinya di petak tersebut sudah kosong petaknya.
+Setelah itu hilangkan floodfill yang paling besar. Di contoh kode di bawah, nilai dari `grid[x][y]` akan dirubah menjadi 0 artinya di petak tersebut sudah kosong petaknya.
 
-Lalu Runtuhkan petak-petak yang kosong kita isi dengan petak-petak atasnya yang masih berisi. 
+Lalu runtuhkan petak-petak yang kosong kita isi dengan petak-petak atasnya yang masih berisi. 
 
 Kompleksitas Waktu: $O(N \times M)$
 
