@@ -115,11 +115,3 @@ int main() {
 }
 ```
 </details>
-
-## Komentar
-    
-- Dalam mencari prefix / suffix dari suatu string, kita juga bisa membuat fungsi sendiri tanpa menggunakan `substr`.
-    
-## Materi Yang Berhubungan
-
-- [C++ Substring](https://cplusplus.com/reference/string/string/substr/)
