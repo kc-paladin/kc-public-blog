@@ -13,7 +13,7 @@ Karena bab ini bahas tentang bruteforce, jadi kita hanya perlu **membruteforce s
 
 Tandai kotak mana saja yang sudah di cek, bisa gunakan array tambahan seperti `bool vis[N][M]`, bernilai `true` apabila sudah di cek, `false` apabila belum.
 
-Kompleksitas Waktu: $O(N \times M )$
+Kompleksitas Waktu: $O(N \times M)$
 
 Kompleksitas Memori: $O(N \times M)$
 
@@ -81,9 +81,6 @@ int main() {
 ## Materi Yang Berhubungan
     
 - [Flood Fill USACO](https://usaco.guide/silver/flood-fill?lang=cpp)
-
-
-
 
 ## Soal Yang Berhubungan
     

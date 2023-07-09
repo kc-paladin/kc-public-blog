@@ -69,7 +69,7 @@ for (int i = 0; i < n; i++) {
 
 Baris pertama dalam setiap code adalah tipe data $bool$ yang akan bernilai $TRUE$ apabila kondisi terpenuhi dan akan bernilai $FALSE$ apabila kondisi tidak terpenuhi. Apabila tidak ada kondisi yang terpenuhi maka output `tidak identik`
 
-Kompleksitas Waktu: $O(2×N^2)$
+Kompleksitas Waktu: $O(N^2)$
 
 Kompleksitas Memori: $O(1)$
 

@@ -129,7 +129,7 @@ int main() {
 </details>
 
 ## Komentar
-- kompleksitas yang lebih tepat adalah $O((N \times M) \times (totalKemungkinanKlikPertama \times totalKemungkinanKlikKedua))$ namun *worst-case*nya bisa mencapai $O((N \times M)^2)$
+- kompleksitas yang lebih tepat adalah $O((N \times M) \times (\text{total kemungkinan klik pertama} \times \text{total kemungkinan klik kedua}))$ namun *worst-case*nya bisa mencapai $O((N \times M)^2)$
 
 ## Soal Yang Berhubungan
 - [Jawbreaker V: Cari Optimal](https://tlx.toki.id/courses/competitive/chapters/13/problems/G)

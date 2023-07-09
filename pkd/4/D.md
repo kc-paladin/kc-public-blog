@@ -10,7 +10,7 @@ Sebelum kita bahas solusi soal ini, yuk pastikan dulu kalian udah paham sama int
 
 Setelah itu, ada $J$ orang juri yang diundang, dan masing-masing juri memiliki nilai batas keindahan. Juri ke-$i$ akan terkesima jika total skor/nilai keindahan Kwek melebihi nilai batas juri tersebut. Berapa banyak rangkaian gerakan yang bisa dipilih Kwak untuk membuat setiap juri terkesima?
 
-Kita bisa membagi _problem_ ini menjadi 2 _subproblem_, yaitu:
+Kita bisa membagi _problem_ ini menjadi $2$ _subproblem_, yaitu:
 1. Mencari nilai dari semua rangkaian gerakan yang bisa dilakukan Kwak.
 2. Mencari berapa banyak rangkaian gerakan yang bisa membuat juri ke-$i$ terkesima.
 
@@ -26,72 +26,79 @@ Untuk subproblem kedua, jika kita menghitung jumlah rangkaian gerakan yang bisa 
 
 using namespace std;
 
-int n, r, y, j; 
-vector<int>score;
-pair<int, char>arr[15];
+int n, r, y, j;
+vector<int> score;
+pair<int, char> arr[15];
 int catat[15];
 bool mark[15];
 
-void permute(int x){
-    if(x >= r){
-        bool Y = (arr[catat[0]].second == 'Y');
-        int ret = arr[catat[0]].first;
+void permute(int x) {
+  if (x >= r) {
+    bool Y = (arr[catat[0]].second == 'Y');
+    int ret = arr[catat[0]].first;
 
-        for(int i = 1; i < r; i++){
-            if(arr[catat[i - 1]].second == 'P'){
-                ret += (arr[catat[i]].first * 2);
-            } else if(arr[catat[i - 1]].second == 'L'){
-                ret += (arr[catat[i]].first / 2);
-            } else{
-                ret += arr[catat[i]].first;
-            }
+    for (int i = 1; i < r; i++) {
+      if (arr[catat[i - 1]].second == 'P') {
+        ret += (arr[catat[i]].first * 2);
+      } else if (arr[catat[i - 1]].second == 'L') {
+        ret += (arr[catat[i]].first / 2);
+      } else {
+        ret += arr[catat[i]].first;
+      }
 
-            if(Y) ret += y;
+      if (Y) ret += y;
 
-            if(arr[catat[i]].second == 'Y') Y = true;
+      if (arr[catat[i]].second == 'Y') Y = true;
 
-            if(ret >= 100000){  //nilai batas juri maks. adalah 100,000 
-                score.push_back(100001);
-                return;
-            }
-        }  
-
-        score.push_back(ret);
-    } else{
-        for(int i = 0; i < n; i++){
-            if(!mark[i]){
-                catat[x] = i;
-                mark[i] = true;
-                permute(x + 1);
-                mark[i] = false;
-            }
-        }
+      if (ret >= 100000) {  // nilai batas juri maks. adalah 100,000
+        score.push_back(100001);
+        return;
+      }
     }
+
+    score.push_back(ret);
+  } else {
+    for (int i = 0; i < n; i++) {
+      if (!mark[i]) {
+        catat[x] = i;
+        mark[i] = true;
+        permute(x + 1);
+        mark[i] = false;
+      }
+    }
+  }
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    string subtask; cin >> subtask;
-    int st; cin >> st;
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+  string subtask;
+  cin >> subtask;
+  int st;
+  cin >> st;
 
-    cin >> n >> r >> y >> j;
-    for(int i = 0; i < n; i++){
-        int d; cin >> d;
-        char t; cin >> t;
-        arr[i] = {d, t};
-    }
+  cin >> n >> r >> y >> j;
+  for (int i = 0; i < n; i++) {
+    int d;
+    cin >> d;
+    char t;
+    cin >> t;
+    arr[i] = {d, t};
+  }
 
-    permute(0);
-    sort(score.begin(), score.end());
+  permute(0);
+  sort(score.begin(), score.end());
 
-    while(j--){
-        int x; cin >> x;
-        int sz = score.size();
-        int tmp = upper_bound(score.begin(), score.end(), x) - score.begin();
-        cout << sz - tmp << endl;
-    }
+  while (j--) {
+    int x;
+    cin >> x;
+    int sz = score.size();
+    int tmp = upper_bound(score.begin(), score.end(), x) - score.begin();
+    cout << sz - tmp << endl;
+  }
 
-    return 0;
+  return 0;
 }
 ```
 </details>

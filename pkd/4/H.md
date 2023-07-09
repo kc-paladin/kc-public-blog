@@ -19,69 +19,76 @@ Kompleksitas Memori: $O(M + N)$
 <details>
   <summary>Solution Code</summary>
 
-    #include<bits/stdc++.h>
-    using namespace std;
+```c++
+#include <bits/stdc++.h>
 
-    int suara[10001], tambah[20];
-    int M, N, ukuran, sisa;
+using namespace std;
 
-    bool rekursi(int posisi, int grup, int lebih){
-        if(grup == N - 1){
-            if(sisa - lebih <= 1){ //bisa saja grup terakhir yang berlebih
-                return true;
-            }
-            return false;
-        }
+int suara[10001], tambah[20];
+int M, N, ukuran, sisa;
 
-        if(suara[posisi + ukuran - 1] != suara[posisi + ukuran]){
-            if(rekursi(posisi + ukuran, grup + 1, lebih)){
-                return true;
-            }
-        }
-        if(lebih < sisa){
-            if(suara[posisi + ukuran] != suara[posisi + ukuran + 1]){
-                tambah[grup] = 1;
-                if(rekursi(posisi + ukuran + 1, grup + 1, lebih + 1)){
-                    return true;
-                }
-                tambah[grup] = 0;
-            }
-        }
-        return false;
+bool rekursi(int posisi, int grup, int lebih) {
+  if (grup == N - 1) {
+    if (sisa - lebih <= 1) {  // bisa saja grup terakhir yang berlebih
+      return true;
     }
+    return false;
+  }
 
-    int main(){
-        ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-        cin >> M;
-
-        for(int i = 0; i < M; ++i){
-            cin >> suara[i];
-        }
-
-        sort(suara, suara + M);
-
-        //Kita memilih nilai suara[M] = 0 untuk memastikan nilai suara[M - 1] dan suara[M] tidak akan pernah sama.
-        suara[M] = 0; //Bagian ini sebenarnya tidak diperlukan karena secara `default` nilai suara[M] adalah 0.
-
-        cin >> N;
-
-        ukuran = M / N;
-        sisa = M % N;
-
-        rekursi(0, 0, 0);
-
-        int pos = 0;
-        for(int i = 0; i < N - 1; ++i){
-            pos += ukuran;
-            if(tambah[i]){
-                pos++;
-            }
-            cout << suara[pos - 1] + 1 << " ";
-        }
-
-        return 0;
+  if (suara[posisi + ukuran - 1] != suara[posisi + ukuran]) {
+    if (rekursi(posisi + ukuran, grup + 1, lebih)) {
+      return true;
     }
+  }
+  if (lebih < sisa) {
+    if (suara[posisi + ukuran] != suara[posisi + ukuran + 1]) {
+      tambah[grup] = 1;
+      if (rekursi(posisi + ukuran + 1, grup + 1, lebih + 1)) {
+        return true;
+      }
+      tambah[grup] = 0;
+    }
+  }
+  return false;
+}
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+
+  cin >> M;
+
+  for (int i = 0; i < M; ++i) {
+    cin >> suara[i];
+  }
+
+  sort(suara, suara + M);
+
+  // Kita memilih nilai suara[M] = 0 untuk memastikan nilai suara[M - 1] dan
+  // suara[M] tidak akan pernah sama.
+  suara[M] = 0;  // Bagian ini sebenarnya tidak diperlukan karena secara
+                 // `default` nilai suara[M] adalah 0.
+
+  cin >> N;
+
+  ukuran = M / N;
+  sisa = M % N;
+
+  rekursi(0, 0, 0);
+
+  int pos = 0;
+  for (int i = 0; i < N - 1; ++i) {
+    pos += ukuran;
+    if (tambah[i]) {
+      pos++;
+    }
+    cout << suara[pos - 1] + 1 << " ";
+  }
+
+  return 0;
+}
+```
 
 </details>
 
