@@ -3,6 +3,7 @@
 Author: Yose Yehezkiel Maranata
 
 Bebek Pak Dengklek... make **sepatu**?! **sepatu** paan tuh?!!
+
 [![image.png](https://i.postimg.cc/jd0hTSbB/image.png)](https://postimg.cc/c6h3MZ6c)
 
 bukann bukann...
