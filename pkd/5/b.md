@@ -4,9 +4,9 @@ Author: Andreas Timothy
 
 Perhatikan sifat berikut:
 
-Apabila $B$ bernilai genap, $A^B = A^{\lfloor \frac{B}{2} \rfloor} \times A^{\lfloor \frac{B}{2} \rfloor}$
+- Apabila $B$ bernilai genap, $A^B = A^{\lfloor \frac{B}{2} \rfloor} \times A^{\lfloor \frac{B}{2} \rfloor}$
 
-Apabila $B$ bernilai ganjil, $A^B = A^{\lfloor \frac{B}{2} \rfloor} \times A^{\lfloor \frac{B}{2} \rfloor} \times A$
+- Apabila $B$ bernilai ganjil, $A^B = A^{\lfloor \frac{B}{2} \rfloor} \times A^{\lfloor \frac{B}{2} \rfloor} \times A$
 
 Disini dapat dilihat bahwa kita cukup melakukan perpangkatan sebanyak $log B$ kali karena nilai $B$ dibagi $2$ terus-menerus. Untuk mendapatkan 6 digit terakhir kita tinggal melakukan modulo $1000000$.
 
