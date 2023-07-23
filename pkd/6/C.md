@@ -6,43 +6,47 @@ Perhatikan bahwa semakin besar nilai bilangan yang akan kita kalikan, semakin be
 
 Untuk lebih jelasnya, perhatikan contoh berikut!
 
-Misalkan ada dua buah bilangan $a$ dan $b$. Jika $a$ = 3 dan $b$ = 6, maka $a × b$ = 3 × 6 = 18.
+Misalkan ada dua buah bilangan $a$ dan $b$. Jika $a = 3$ dan $b = 6$, maka $a × b = 3 × 6 = 18$.
 
-Kita coba menambah nilai $a$ menjadi 5.
+Kita coba menambah nilai $a$ menjadi $5$.
 
-Sekarang, $a$ = 5 dan $b$ = 6, maka $a × b$ = 5 × 6 = 30. Hasilnya lebih besar dibandingkan sebelumnya yang hanya bernilai 18.
+Sekarang, $a = 5$ dan $b = 6$, maka $a × b = 5 × 6 = 30$. Hasilnya lebih besar dibandingkan sebelumnya yang hanya bernilai $18$.
 
-Kali ini, kita juga mencoba untuk hanya mengubah nilai $b$ menjadi 7.
+Kali ini, kita juga mencoba untuk hanya mengubah nilai $b$ menjadi $7$.
 
-$a$ = 3 dan $b$ = 7, maka $a × b$ = 3 × 7 = 21. Hasilnya juga menjadi lebih besar dibandingkan sebelumnya yang hanya bernilai 18.
+$a = 3$ dan $b = 7$, maka $a × b = 3 × 7 = 21$. Hasilnya juga menjadi lebih besar dibandingkan sebelumnya yang hanya bernilai 18.
 
-Selanjutnya, kita mencoba untuk menambah nilai $a$ maupun $b$. Kita tambah nilai $a$ menjadi 5 dan $b$ menjadi 7.
+Selanjutnya, kita mencoba untuk menambah nilai $a$ maupun $b$. Kita tambah nilai $a$ menjadi $5$ dan $b$ menjadi $7$.
 
-$a$ = 5 dan $b$ = 7, maka $a × b$ = 5 × 7 = 35. Hasilnya menjadi lebih besar dibandingkan sebelum kita menambah nilai $a$ dan $b$, hanya menambah nilai $a$, maupun hanya menambah nilai $b$.
+$a = 5$ dan $b = 7$, maka $a × b = 5 × 7 = 35$. Hasilnya menjadi lebih besar dibandingkan sebelum kita menambah nilai $a$ dan $b$, hanya menambah nilai $a$, maupun hanya menambah nilai $b$.
 
 Artinya, untuk mendapatkan hasil perkalian yang minimum, kita perlu meminimalkan bilangan-bilangan yang hendak dikali juga.
 
-Sekarang, kita tahu jika bilangan yang besar pada vektor $v1$ bertemu dengan bilangan yang besar pada vektor $v2$, maka hasil perkaliannya akan menjadi lebih besar. Karena itu, kita bisa menghindari hal tersebut dengan mengurutkan $v1$ dengan urutan *ascending* (menaik) dan mengurutkan $v2$ dengan urutan *descending* (menurun), atau sebaliknya.
+Sekarang, kita tahu jika bilangan yang besar pada vektor $V_1$ bertemu dengan bilangan yang besar pada vektor $V_2$, maka hasil perkaliannya akan menjadi lebih besar. Karena itu, kita bisa menghindari hal tersebut dengan mengurutkan $V_1$ dengan urutan *ascending* (menaik) dan mengurutkan $V_2$ dengan urutan *descending* (menurun), atau sebaliknya.
 
 **Contoh**
 
-$v1$ = (1, 3, -5)
+$V_1 = (1, 3, -5)$
 
-$v2$ = (-2, 4, 1)
+$V_2 = (-2, 4, 1)$
 
-Jika kita langsung mengalikan kedua vektor, maka hasil yang akan kita dapatkan adalah 1 × (-2) + 3 × 4 + (-5) × 1 = -2 + 12 - 5 = 5.
+Jika kita langsung mengalikan kedua vektor, maka hasil yang akan kita dapatkan adalah:
 
-Sementara jika kita mengurutkan $v1$ secara menaik dan $v2$ secara menurun:
+$$1 × (-2) + 3 × 4 + (-5) × 1 = -2 + 12 - 5 = 5$$.
 
-$v1$ = (-5, 1, 3)
+Sementara jika kita mengurutkan $V_1$ secara menaik dan $V_2$ secara menurun:
 
-$v2$ = (4, 1, -2)
+$V_1 = (-5, 1, 3)$
 
-maka hasil yang akan kita dapatkan adalah (-5) × 4 + 1 × 1 + 3 × (-2) = -20 + 1 - 6 = -25.
+$V_2 = (4, 1, -2)$
+
+maka hasil yang akan kita dapatkan adalah:
+
+$$(-5) × 4 + 1 × 1 + 3 × (-2) = -20 + 1 - 6 = -25$$.
 
 Dengan cara itulah, kita bisa mendapatkan hasil perkalian skalar yang minimum.
 
-Kompleksitas Waktu: $O(N + N log N)$
+Kompleksitas Waktu: $O(N \log N)$
 
 Kompleksitas Memori: $O(N)$
 

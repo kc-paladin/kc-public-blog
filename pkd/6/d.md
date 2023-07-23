@@ -2,7 +2,7 @@
 
 Author: Andreas Timothy
 
-Solusi dari problem ini cukup _straightforward_; untuk memaksimalkan banyaknya bebek yang dapat dibuat senang, kita cukup **memprioritaskan** cokelat dengan harga termurah, lalu membeli setiap jenis cokelat dalam jumlah maksimum yang **_reasonable_**, yaitu $min(B_i, \frac{\text{sisa dana}}{H_i})$.
+Solusi dari problem ini cukup _straightforward_; untuk memaksimalkan banyaknya bebek yang dapat dibuat senang, kita cukup **memprioritaskan** cokelat dengan harga termurah, lalu membeli setiap jenis cokelat dalam jumlah maksimum yang **_reasonable_**, yaitu $\displaystyle min\left(B_i, \frac{\text{sisa dana}}{H_i}\right)$.
 
 Kompleksitas Waktu: $O(N \log N)$
 

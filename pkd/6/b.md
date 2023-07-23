@@ -2,7 +2,7 @@
 
 Author: Andreas Timothy
 
-Problem ini sebenarnya sama persis dengan problem _activity selection_ yang digunakan sebagai contoh pada bab 6 buku [pemrograman kompetitif dasar](https://osn.toki.id/data/pemrograman-kompetitif-dasar.pdf). Observasi utamanya adalah selalu memilih perjamuan dengan waktu berakhir ($Si + Di$) tercepat akan memberikan kita jawaban yang optimal.
+Problem ini sebenarnya sama persis dengan problem _activity selection_ yang digunakan sebagai contoh pada bab $6$ buku [pemrograman kompetitif dasar](https://osn.toki.id/data/pemrograman-kompetitif-dasar.pdf). Observasi utamanya adalah selalu memilih perjamuan dengan waktu berakhir $(S_i + D_i)$ tercepat akan memberikan kita jawaban yang optimal.
 
 Kompleksitas Waktu: $O(N \log N)$
 

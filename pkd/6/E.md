@@ -12,13 +12,13 @@ nih POV pak dangklek :
 
 [![image.png](https://i.postimg.cc/cHGJH2L1/image.png)](https://postimg.cc/67zKbHZF)
 
-anyway, di soal ini kita diminta untuk mencari banyaknya bebek maksimum yang menggunakan sepatu baru. Seekor bebek bisa make sebuah sepatu kalau ukuran sepatunya pas atau lebih 1. 
+anyway, di soal ini kita diminta untuk mencari banyaknya bebek maksimum yang menggunakan sepatu baru. Seekor bebek bisa make sebuah sepatu kalau ukuran sepatunya pas atau lebih $1$. 
 
 [![image.png](https://i.postimg.cc/N047t3tT/image.png)](https://postimg.cc/B8j1cwXQ)
 
-Gambar diatas menunjukan untuk suatu ukuran kaki(warna merah) dapat memilih ukuran sepatu yang diwarna hijaukan. Kita dapat melihat bahwa ukuran kaki tidak dapat lebih besar dari ukuran sepatu. Contoh ukuran kaki 2 tidak dapat memilih sepatu ukuran 1. 
+Gambar diatas menunjukan untuk suatu ukuran kaki(warna merah) dapat memilih ukuran sepatu yang diwarna hijaukan. Kita dapat melihat bahwa ukuran kaki tidak dapat lebih besar dari ukuran sepatu. Contoh ukuran kaki $2$ tidak dapat memilih sepatu ukuran $1$. 
 
-Kita dapat mencocokan dulu kaki dengan sepatu yang pas. Lalu, kita cocokan ukuran kaki dengan sepatu yang lebih 1. 
+Kita dapat mencocokan dulu kaki dengan sepatu yang pas. Lalu, kita cocokan ukuran kaki dengan sepatu yang lebih $1$. 
 
 Implementasi diserahkan kepada kalian untuk belajar :D. Apabila stuck, silahkan lihat solution code.
 
@@ -67,8 +67,6 @@ int main() {
     
 - Kompleksitas waktu $O(N \log N)$ karena kita perlu melakukan sort dengan quicksort. Namun, bisa dipercepat dengan counting sort menjadi $O(N)$ 
 - Kompleksitas waktu greedynya tetap $O(N)$
-
-
 
 
 ## Soal Yang Berhubungan
