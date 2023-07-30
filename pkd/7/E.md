@@ -42,7 +42,7 @@ Kompleksitas Memori: $O(N^2)$ untuk pertanyaan 1 dan 2, dan $O(N)$ untuk pertany
 <details>
   <summary>Solution Code</summary>
 
-```
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 
