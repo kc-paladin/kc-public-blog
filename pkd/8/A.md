@@ -30,41 +30,43 @@ Pada struktur data *deque*, kita menggunakan fungsi `push_front()` untuk memasuk
 
 Kompleksitas Waktu: $O(N)$
 
-Kompleksitas Memori: $O(min(N, sz))$, dengan $sz$ adalah banyaknya elemen pada *deque*.
+Kompleksitas Memori: $O(N)$
 
 <details>
   <summary>Solution Code</summary>
 
 ```c++
 #include <bits/stdc++.h>
+
 using namespace std;
 
 #define int long long
 
 signed main() {
-  int N;  cin >> N;
+  int N;
+  cin >> N;
 
   string s;
   int x;
 
   deque<int> dq;
-  
-  while(N--) {
+
+  while (N--) {
     cin >> s;
-    if(s == "push_front") {
+    if (s == "push_front") {
       cin >> x;
       dq.push_front(x);
-    } else if(s == "push_back") {
+    } else if (s == "push_back") {
       cin >> x;
       dq.push_back(x);
-    } else if(s == "pop_front") {
+    } else if (s == "pop_front") {
       dq.pop_front();
-    } else if(s == "pop_back") {
+    } else if (s == "pop_back") {
       dq.pop_back();
     }
   }
 
-  for(auto ans : dq) cout << ans << " ";
+  for (auto ans : dq) cout << ans << " ";
 
   return 0;
 }
