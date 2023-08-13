@@ -20,71 +20,77 @@ using namespace std;
 using ll = long long;
 
 const int MAXN = 50002;
-vector<int>adj[MAXN];
+vector<int> adj[MAXN];
 bool vis[MAXN], khusus[MAXN];
 
-void init(int n){
-    for(int i = 1; i <= n; i++){
-        adj[i].clear();
-        vis[i] = khusus[i] = false;
-    }
+void init(int n) {
+  for (int i = 1; i <= n; i++) {
+    adj[i].clear();
+    vis[i] = khusus[i] = false;
+  }
 }
 
-ll dfs(int cur){
-    ll ret = khusus[cur];
-    vis[cur] = true;
+ll dfs(int cur) {
+  ll ret = khusus[cur];
+  vis[cur] = true;
 
-    for(auto &nxt: adj[cur]){
-        if(vis[nxt]) continue;
-        ret += dfs(nxt);    
-    }
+  for (auto &nxt : adj[cur]) {
+    if (vis[nxt]) continue;
+    ret += dfs(nxt);
+  }
 
-    return ret;
+  return ret;
 }
 
-void solve(){
-    int N, E, Q, R; cin >> N >> E >> Q >> R;
-    init(N);
+void solve() {
+  int N, E, Q, R;
+  cin >> N >> E >> Q >> R;
+  init(N);
 
-    vector<pair<int, int>>edge(E + 1);
-    for(int i = 1; i <= E; i++) cin >> edge[i].first >> edge[i].second;
-    for(int i = 1; i <= Q; i++){
-        int x; cin >> x;
-        khusus[x] = true;
+  vector<pair<int, int>> edge(E + 1);
+  for (int i = 1; i <= E; i++) cin >> edge[i].first >> edge[i].second;
+  for (int i = 1; i <= Q; i++) {
+    int x;
+    cin >> x;
+    khusus[x] = true;
+  }
+
+  for (int i = 1; i <= R; i++) {
+    int x;
+    cin >> x;
+    edge[x] = {-1, -1};
+  }
+
+  for (int i = 1; i <= E; i++) {
+    if (edge[i].first == -1) continue;
+    adj[edge[i].first].push_back(edge[i].second);
+    adj[edge[i].second].push_back(edge[i].first);
+  }
+
+  ll ans = 0;
+  for (int i = 1; i <= N; i++) {
+    if (!vis[i]) {
+      ll connected = dfs(i);
+      ll disconnected = Q - connected;
+      ans += connected * disconnected;
     }
+  }
 
-    for(int i = 1; i <= R; i++){
-        int x; cin >> x;
-        edge[x] = {-1, -1};
-    }
-
-    for(int i = 1; i <= E; i++){
-        if(edge[i].first == -1) continue;
-        adj[edge[i].first].push_back(edge[i].second);
-        adj[edge[i].second].push_back(edge[i].first);
-    }
-
-    ll ans = 0;
-    for(int i = 1; i <= N; i++){
-        if(!vis[i]){
-            ll connected = dfs(i);
-            ll disconnected = Q - connected;
-            ans += connected*disconnected;
-        }
-    }
-
-    ans /= 2LL;
-    cout << ans << '\n';
+  ans /= 2LL;
+  cout << ans << '\n';
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    int tc; cin >> tc;
-    while(tc--){
-        solve();
-    }
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+  int tc;
+  cin >> tc;
+  while (tc--) {
+    solve();
+  }
 
-    return 0;
+  return 0;
 }
 ```
 </details>

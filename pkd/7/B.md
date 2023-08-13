@@ -68,7 +68,7 @@ int backtrack(int x, int y) {
 ```
 
 
-Kompleksitas Waktu: $O(N*K)$
+Kompleksitas Waktu: $O(NK)$
 
 Kompleksitas Memori: $O(N)$
 
@@ -143,7 +143,7 @@ main() {
 -->
 ## Komentar
 
-- Total kompleksitas waktu adalah $O(N*K)$ yaitu sebesar size dari array $memo$ 
+- Total kompleksitas waktu adalah $O(NK)$ yaitu sebesar size dari array $memo$ 
 
 
 <!-- Tambahkan referensi link materi yang berhubungan apabila perlu

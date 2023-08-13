@@ -72,8 +72,9 @@ int main() {
   int n, k;
   cin >> n;
   vector<int> start;
-  for(int i=0; i<n; i++){
-    int x; cin >> x;
+  for (int i = 0; i < n; i++) {
+    int x;
+    cin >> x;
     start.push_back(x);
   }
   cin >> k;
@@ -81,23 +82,24 @@ int main() {
   queue<vector<int>> q;
   map<vector<int>, int> dis;
   vector<int> goal;
-  for(int i=1; i<=n; i++) goal.push_back(i);
+  for (int i = 1; i <= n; i++) goal.push_back(i);
 
   dis[start] = 0;
   q.push(start);
 
-  while(!q.empty()){
-    vector<int> u = q.front(); q.pop();
+  while (!q.empty()) {
+    vector<int> u = q.front();
+    q.pop();
 
-    if(u == goal){
+    if (u == goal) {
       cout << dis[u] << endl;
       return 0;
     }
 
-    for(int i=0; i+k <= n; i++){
+    for (int i = 0; i + k <= n; i++) {
       vector<int> v = u;
-      reverse(v.begin()+i, v.begin()+i+k);
-      if(!dis.count(v)){
+      reverse(v.begin() + i, v.begin() + i + k);
+      if (!dis.count(v)) {
         dis[v] = dis[u] + 1;
         q.push(v);
       }

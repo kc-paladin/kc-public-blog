@@ -25,50 +25,52 @@ Untuk output dari soal ini, kita cukup jalankan DFS dari $A$ ke $B$. Jika ada pa
 
 using namespace std;
 
-map<string, vector<string>>adj;
-vector<string>ans;
+map<string, vector<string>> adj;
+vector<string> ans;
 
-bool dfs(string cur, string goal){
-    if(cur == goal) return true;
+bool dfs(string cur, string goal) {
+  if (cur == goal) return true;
 
-    bool connected = false;
-    for(auto &nxt: adj[cur]){
-        connected |= dfs(nxt, goal);
+  bool connected = false;
+  for (auto &nxt : adj[cur]) {
+    connected |= dfs(nxt, goal);
 
-        if(connected){
-            ans.push_back(nxt);
-            return true;
-        }
+    if (connected) {
+      ans.push_back(nxt);
+      return true;
     }
+  }
 
-    return false;
+  return false;
 }
 
-int main(){
-    int n, m;   cin >> n >> m;
-    string p, c;
+int main() {
+  int n, m;
+  cin >> n >> m;
+  string p, c;
 
-    for(int i = 0; i < m; i++){
-        cin >> p >> c;
-        adj[p].push_back(c);
-    }
+  for (int i = 0; i < m; i++) {
+    cin >> p >> c;
+    adj[p].push_back(c);
+  }
 
-    string a, b; cin >> a >> b;
+  string a, b;
+  cin >> a >> b;
 
-    bool tmpA = dfs(a, b);
-    bool tmpB = dfs(b, a);
+  bool tmpA = dfs(a, b);
+  bool tmpB = dfs(b, a);
 
-    if(tmpA){
-        cout << a << '\n';
-        for(int i = ans.size() - 1; i >= 0; i--) cout << ans[i] << '\n';
-    } else if(tmpB){
-        cout << b << '\n';
-        for(int i = ans.size() - 1; i >= 0; i--) cout << ans[i] << '\n';
-    } else{
-        cout << "TIDAK MUNGKIN" << '\n';
-    }
+  if (tmpA) {
+    cout << a << '\n';
+    for (int i = ans.size() - 1; i >= 0; i--) cout << ans[i] << '\n';
+  } else if (tmpB) {
+    cout << b << '\n';
+    for (int i = ans.size() - 1; i >= 0; i--) cout << ans[i] << '\n';
+  } else {
+    cout << "TIDAK MUNGKIN" << '\n';
+  }
 
-    return 0;
+  return 0;
 }
 ```
 </details>

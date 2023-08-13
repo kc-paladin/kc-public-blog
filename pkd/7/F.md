@@ -84,25 +84,23 @@ bool batu[505][505];
 long long memo[505][505];
 
 long long dp(long long r, long long c) {
-  
-  if(r > R || c < 1 || c > C) return 0;
-  if(memo[r][c] != -1) {
+  if (r > R || c < 1 || c > C) return 0;
+  if (memo[r][c] != -1) {
     return memo[r][c];
   }
-  
+
   int nxtr = r;
-  while(nxtr <= R && !batu[nxtr+1][c])
-    nxtr++;
+  while (nxtr <= R && !batu[nxtr + 1][c]) nxtr++;
 
   long long res = 0;
-  res += batu[nxtr+1][c];
-  
+  res += batu[nxtr + 1][c];
+
   long long cnext = c;
-  while(cnext > 0 && batu[nxtr+1][cnext]) cnext--;
+  while (cnext > 0 && batu[nxtr + 1][cnext]) cnext--;
   res += dp(nxtr, cnext);
 
   cnext = c;
-  while(cnext <= C && batu[nxtr+1][cnext]) cnext++;
+  while (cnext <= C && batu[nxtr + 1][cnext]) cnext++;
   res += dp(nxtr, cnext);
 
   return memo[r][c] = res;
@@ -114,18 +112,18 @@ int main() {
   memset(batu, false, sizeof(batu));
   memset(memo, -1, sizeof(memo));
 
-  for(long long i=1; i<=n; i++) {
+  for (long long i = 1; i <= n; i++) {
     long long top, left, bot, right;
     cin >> top >> left >> bot >> right;
-    for(long long r=top; r<=bot; r++) {
-      for(long long c=left; c<=right; c++) {
+    for (long long r = top; r <= bot; r++) {
+      for (long long c = left; c <= right; c++) {
         batu[r][c] = true;
       }
     }
   }
 
   long long ans = 0;
-  for(long long c=1; c<=C; c++) {
+  for (long long c = 1; c <= C; c++) {
     ans = max(ans, dp(0, c));
   }
   cout << ans;
