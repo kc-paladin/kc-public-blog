@@ -24,38 +24,41 @@ Untuk solusi problem ini, kita cukup jalankan Dijkstra dari node $a$, dan output
 using namespace std;
 
 const int N = 2502;
-vector<pair<int, int>>adj[N];
-vector<int>dist(N, 1e9);
+vector<pair<int, int>> adj[N];
+vector<int> dist(N, 1e9);
 
-int dijkstra(int a, int b){
-    dist[a] = 0;
-    priority_queue<pii, vector<pii>, greater<pii>>pq;
-    pq.emplace(0, a);
+int dijkstra(int a, int b) {
+  dist[a] = 0;
+  priority_queue<pii, vector<pii>, greater<pii>> pq;
+  pq.emplace(0, a);
 
-    while(!pq.empty()){
-        auto [curW, u] = pq.top(); pq.pop();
-        for(auto &[v, w]: adj[u]){
-            if(dist[v] > curW + w){
-                dist[v] = curW + w;
-                pq.emplace(dist[v], v);
-            }
-        }
+  while (!pq.empty()) {
+    auto[curW, u] = pq.top();
+    pq.pop();
+    for (auto & [ v, w ] : adj[u]) {
+      if (dist[v] > curW + w) {
+        dist[v] = curW + w;
+        pq.emplace(dist[v], v);
+      }
     }
+  }
 
-    return dist[b];
+  return dist[b];
 }
 
-int main(){
-    int n, e, a, b; cin >> n >> e >> a >> b;
-    while(e--){
-        int u, v, w; cin >> u >> v >> w;
-        adj[u].emplace_back(v, w);
-        adj[v].emplace_back(u, w);
-    }
+int main() {
+  int n, e, a, b;
+  cin >> n >> e >> a >> b;
+  while (e--) {
+    int u, v, w;
+    cin >> u >> v >> w;
+    adj[u].emplace_back(v, w);
+    adj[v].emplace_back(u, w);
+  }
 
-    cout << dijkstra(a, b) << '\n';
+  cout << dijkstra(a, b) << '\n';
 
-    return 0;
+  return 0;
 }
 ```
 </details>

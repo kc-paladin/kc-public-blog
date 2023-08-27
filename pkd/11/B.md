@@ -7,7 +7,7 @@ Di soal ini, kita diberikan sebuah graph berisi $V$ nodes dan $E$ edges. Pak Den
 Output dari soal ini ada $3$ jenis, yaitu:
 - `"Pak Dengklek tidak mau pulang"` jika di dalam graph tersebut terdapat negative cycle.
 - `"Tidak ada jalan"` jika node $0$ dan $(V - 1)$ tidak terhubung
-- Banyak energi minimum yang diperlukan pak dengklek, atau ($-1$ * banyaknya energi berlebih).
+- Banyak energi minimum yang diperlukan pak dengklek, atau ($-1 \times \\$ banyaknya energi berlebih).
 
 Nah, bagaimana cara mengecek ada/tidaknya negative cycle? Gunakan algoritma Bellman-Ford!
 
@@ -32,77 +32,81 @@ Maka sebenarnya jumlah edges yang harus dilewati untuk mendapatkan shortest path
 
 using namespace std;
 
-struct Edge{
-    int u, v, w;
+struct Edge {
+  int u, v, w;
 
-    Edge(int _u, int _v, int _w){
-        u = _u;
-        v = _v;
-        w = _w;
-    }
+  Edge(int _u, int _v, int _w) {
+    u = _u;
+    v = _v;
+    w = _w;
+  }
 };
 
-void solve(){
-    int v, e; cin >> v >> e;
-    vector<Edge>a;
-    vector<int>adj[v];
-    vector<bool>vis(v, 0);
+void solve() {
+  int v, e;
+  cin >> v >> e;
+  vector<Edge> a;
+  vector<int> adj[v];
+  vector<bool> vis(v, 0);
 
-    for(int i = 0; i < e; i++){
-        int u, v, w; cin >> u >> v >> w;
-        a.push_back(Edge(u, v, w));
-        adj[u].push_back(v);
+  for (int i = 0; i < e; i++) {
+    int u, v, w;
+    cin >> u >> v >> w;
+    a.push_back(Edge(u, v, w));
+    adj[u].push_back(v);
+  }
+
+  queue<int> q;
+  q.push(0);
+  vis[0] = true;
+
+  while (!q.empty()) {
+    int now = q.front();
+    q.pop();
+
+    for (auto &e : adj[now]) {
+      if (!vis[e]) {
+        vis[e] = true;
+        q.push(e);
+      }
     }
+  }
 
-    queue<int>q; 
-    q.push(0);
-    vis[0] = true;
+  vector<int> dis(v, 1e9);
+  dis[0] = 0;
 
-    while(!q.empty()){
-        int now = q.front(); q.pop();
-
-        for(auto &e: adj[now]){
-            if(!vis[e]){
-                vis[e] = true;
-                q.push(e);
-            }
-        }
+  for (int i = 1; i <= v - 1; i++) {
+    for (auto &e : a) {
+      dis[e.v] = min(dis[e.v], dis[e.u] + e.w);
     }
-    
-    vector<int>dis(v, 1e9);
-    dis[0] = 0;
+  }
 
-    for(int i = 1; i <= v - 1; i++){
-        for(auto &e: a){
-            dis[e.v] = min(dis[e.v], dis[e.u] + e.w);
-        }
+  for (auto &e : a) {
+    if ((dis[e.v] > dis[e.u] + e.w) && vis[e.v]) {
+      cout << "Pak Dengklek tidak mau pulang" << endl;
+      return;
     }
+  }
 
-    for(auto &e: a){
-        if((dis[e.v] > dis[e.u] + e.w) && vis[e.v]){
-            cout << "Pak Dengklek tidak mau pulang" << endl;
-            return;
-        }
-    }
-
-    if(!vis[v - 1]){
-        cout << "Tidak ada jalan" << endl;
-        return;
-    }
-
-    cout << dis[v - 1] << endl;
-
+  if (!vis[v - 1]) {
+    cout << "Tidak ada jalan" << endl;
     return;
+  }
+
+  cout << dis[v - 1] << endl;
+
+  return;
 }
 
-int main(){
-    int tc; cin >> tc;
+int main() {
+  int tc;
+  cin >> tc;
 
-    while(tc--){
-        solve();
-    }
+  while (tc--) {
+    solve();
+  }
 
-    return 0;
+  return 0;
 }
 ```
 </details>
