@@ -31,19 +31,24 @@ Setelah mendapatkan observasi tersebut, kita bisa langsung mengimplementasikan s
 
 using namespace std;
 
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+  double x1, y1, r1;
+  cin >> x1 >> y1 >> r1;
+  double x2, y2, r2;
+  cin >> x2 >> y2 >> r2;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    double x1, y1, r1; cin >> x1 >> y1 >> r1;
-    double x2, y2, r2; cin >> x2 >> y2 >> r2;
+  double a = abs(x1 - x2);
+  double b = abs(y1 - y2);
 
-    double a = abs(x1 - x2);
-    double b = abs(y1 - y2);
+  if (hypot(a, b) > r1 + r2 || hypot(a, b) + min(r1, r2) < max(r1, r2))
+    cout << "tidak bersentuhan" << '\n';
+  else
+    cout << "bersentuhan" << '\n';
 
-    if(hypot(a, b) > r1 + r2 || hypot(a, b) + min(r1, r2) < max(r1, r2)) cout << "tidak bersentuhan" << '\n';
-    else  cout << "bersentuhan" << '\n';
-
-    return 0;   
+  return 0;
 }
 ```
 </details>

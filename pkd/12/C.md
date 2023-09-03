@@ -53,29 +53,32 @@ Kompleksitas Memori: $O(N)$
   <summary>Solution Code</summary>
 
 ```c++
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-  int N;  cin >> N;
+  int N;
+  cin >> N;
 
   double x[N + 1], y[N + 1];
-  for(int i = 1; i <= N; i++) {
+  for (int i = 1; i <= N; i++) {
     cin >> x[i] >> y[i];
   }
 
   double ans = LLONG_MAX;
   bool same = true;
 
-  for(int i = 1; i <= N - 2; i++) {
-    for(int j = i + 1; j <= N - 1; j++) {
-      for(int k = j + 1; k <= N; k++) {
-        double area = abs((x[i] * y[j] + x[j] * y[k] + x[k] * y[i]) - (x[j] * y[i] + x[k] * y[j] + x[i] * y[k])) / 2;
-        if(area > 0) {
-          if(area < ans) {
+  for (int i = 1; i <= N - 2; i++) {
+    for (int j = i + 1; j <= N - 1; j++) {
+      for (int k = j + 1; k <= N; k++) {
+        double area = abs((x[i] * y[j] + x[j] * y[k] + x[k] * y[i]) -
+                          (x[j] * y[i] + x[k] * y[j] + x[i] * y[k])) /
+                      2;
+        if (area > 0) {
+          if (area < ans) {
             ans = area;
             same = false;
-          } else if(area == ans) {
+          } else if (area == ans) {
             same = true;
           }
         }
@@ -83,7 +86,7 @@ int main() {
     }
   }
 
-  if(same) {
+  if (same) {
     cout << fixed << setprecision(2) << -1;
   } else {
     cout << fixed << setprecision(2) << ans;
