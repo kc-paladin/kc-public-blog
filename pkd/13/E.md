@@ -2,13 +2,13 @@
 
 Author: Hamiz Ghani
 
-Diberikan $N × M$ buah grid, masing-masing grid berisi antara batu (#) atau lautan magma yang tidak boleh dikunjungi(.). Kita akan menentukan berapa lompatan minimum yang diperlukan dari $S$ ke $C$ dengan ketentuan yang sudah ditulis dalam soal.
+Diberikan $N × M$ buah grid, masing-masing grid berisi antara batu (#) atau lautan magma yang tidak boleh dikunjungi (.). Kita akan menentukan berapa lompatan minimum yang diperlukan dari $S$ ke $C$ dengan ketentuan yang sudah ditulis dalam soal.
 
 Kali ini, kita akan menggunakan algrotima djikstra yang didefinisikan sebagai berikut :
 ```c++
 pq<{dis,{x,y}}>
 ```
-dimana jarak lompatan yang diperlukan untuk mencapai grid $(x,y)$ dari titik mulai adalah sebanyak dis. Pada awalnya tentu kita akan melakukan push titik start itu sendiri.
+dimana jarak lompatan yang diperlukan untuk mencapai grid $(x,y)$ dari titik mulai adalah sebanyak $dis$. Pada awalnya tentu kita akan melakukan push titik start itu sendiri.
 
 note : `priority_queue` saya sudah dimodifikasi sehingga nilai terkecil berada di top.
 
@@ -19,7 +19,7 @@ Untuk setiap grid pada looping, lakukan :
 pq.push(dis+jump,{x,y});
 ```
 
-Apabila titik harta karun tidak ditemukan pada proses djikstra, maka kita akan mengeluarkan `-1`
+Apabila titik harta karun tidak ditemukan pada proses djikstra, maka kita akan mengeluarkan `-1`.
 
 Kompleksitas Waktu: $O(N*M)$
 
