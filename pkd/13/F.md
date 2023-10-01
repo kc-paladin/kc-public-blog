@@ -1,4 +1,4 @@
-# [The Alien of Yogyakarta The Curse of The IFO](https://tlx.toki.id/courses/competitive/chapters/13/problems/F)
+# [F. The Alien of Yogyakarta The Curse of The IFO](https://tlx.toki.id/courses/competitive/chapters/13/problems/F)
 
 Author: Hamiz Ghani
 

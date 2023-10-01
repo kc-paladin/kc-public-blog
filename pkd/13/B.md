@@ -32,7 +32,7 @@ Pada subtasks ini, $K=2$, perhatikan bahwa $Q = N^2$ (dan $Q > N^2$ untuk subtas
 
 Kemudian apabila hasil pair $(i, j)$ menghasilkan `tidak` maka kita bisa mark $i$ dan $j$ sebagai "Bad Numbers".
 
-Kemudian kita bisa iterasi $X$ dari $1$ sampai $N$, dan kita masukkan $X$ kedalam list $S$ apbila $X$ bukan suatu "Bad Numbers".
+Kemudian kita bisa iterasi $X$ dari $1$ sampai $N$, dan kita masukkan $X$ kedalam list $S$ apabila $X$ bukan suatu "Bad Numbers".
 
 Terakhir kita cukup output $S$, namun karena disini kita masih ada sisa $\displaystyle Q - \frac{N \times (N - 1)}{2}$ bisa kita coba output setiap $S'$ dimana $S' \in S$ dan $|S'| = |S| - 1$.
 

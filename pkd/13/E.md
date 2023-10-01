@@ -1,4 +1,4 @@
-# [Sang Pelompat](https://tlx.toki.id/courses/competitive/chapters/13/problems/E)
+# [E. Sang Pelompat](https://tlx.toki.id/courses/competitive/chapters/13/problems/E)
 
 Author: Hamiz Ghani
 
