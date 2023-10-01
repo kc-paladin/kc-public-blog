@@ -8,6 +8,7 @@ Untuk setiap input file kita bisa coba cari solusi dari input tersebut.
 
 Beberapa ide dasar yang bisa kita lakukan untuk setiap persoalan adalah sebagai berikut:
 
+- Coba untuk selesaikan beberapa row / column satu-satu terlebih dahulu
 - Liat elemen terbesar / terkecil pada input, dan coba kira-kira apakah menaruh elemen-elemen besar / kecil bisa mencukupinya
 - Apabila kelebihan / kekecilan bisa di *adjust*
 - Pada kasus uji juga ada yang berupa [Magic Square](https://en.wikipedia.org/wiki/Magic_square) (Semua rows / column nya sama jumlahnya)
@@ -21,6 +22,7 @@ X X X X X
 X X X X X
 ```
 - Kemudian coba fill-in `X` nya perlahan-lahan untuk mendapatkan hasil sesuai yang diinginkan
+- Bisa coba untuk fill-in semua rows dulu baru columns (ataupun sebaliknya), nanti bisa melakukan pertukaran cell sehingga jumlah rows-nya masih aman.
 - Pada dasarnya soal ini hanya menebak-nebak dengan strategi coba-coba
 
 Berikut merupakan input dan output dari setiap kasus uji (hasil output tentu saja tidak perlu persis sama dengan yang diinginkan):
