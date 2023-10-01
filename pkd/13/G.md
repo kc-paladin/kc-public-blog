@@ -26,71 +26,72 @@ using namespace std;
 
 int n, m;
 
-int dr[4] = {0,0,1,-1};
-int dc[4] = {1,-1,0,0};
+int dr[4] = {0, 0, 1, -1};
+int dc[4] = {1, -1, 0, 0};
 
-bool inside(int x, int y) {
-    return x>=0&&x<n&&y>=0&&y<m;
-}
+bool inside(int x, int y) { return x >= 0 && x < n && y >= 0 && y < m; }
 
-void klik(int i, int j, int warna, vector<vector<int>> &grid, vector<vector<bool>> &vis, int &tot) {
-    vis[i][j] = 1;
-    grid[i][j] = 0 ;
-    tot++;
-    
-    for(int k=0;k<4;k++) {
-        int tr = i+dr[k], tc = j+dc[k];
-        if(!inside(tr,tc)) continue;
-        if(vis[tr][tc]) continue;
-        if(grid[tr][tc]!=warna) continue;
-        klik(tr, tc, warna, grid, vis, tot);
-    }
-    return;
+void klik(int i, int j, int warna, vector<vector<int>> &grid,
+          vector<vector<bool>> &vis, int &tot) {
+  vis[i][j] = 1;
+  grid[i][j] = 0;
+  tot++;
+
+  for (int k = 0; k < 4; k++) {
+    int tr = i + dr[k], tc = j + dc[k];
+    if (!inside(tr, tc)) continue;
+    if (vis[tr][tc]) continue;
+    if (grid[tr][tc] != warna) continue;
+    klik(tr, tc, warna, grid, vis, tot);
+  }
+  return;
 }
 
 int coba(vector<vector<int>> grid) {
-    vector<vector<int>> temp = grid;
-    vector<vector<bool>> vis(n, vector<bool>(m, 0));
-    int ans = 0;
+  vector<vector<int>> temp = grid;
+  vector<vector<bool>> vis(n, vector<bool>(m, 0));
+  int ans = 0;
 
-    //runtuh
-    for(int j=0;j<m;j++) {
-        int prev = -1; 
-        for(int i=n-1;i>=0;i--){
-            if(prev == -1 && grid[i][j] == 0 ) prev = i;
-            else if(prev != -1 && grid[i][j] != 0) {    
-                grid[prev][j] = grid[i][j];
-                grid[i][j] = 0;
-                prev--;
-            }
-        }
+  // runtuh
+  for (int j = 0; j < m; j++) {
+    int prev = -1;
+    for (int i = n - 1; i >= 0; i--) {
+      if (prev == -1 && grid[i][j] == 0)
+        prev = i;
+      else if (prev != -1 && grid[i][j] != 0) {
+        grid[prev][j] = grid[i][j];
+        grid[i][j] = 0;
+        prev--;
+      }
     }
+  }
 
-    for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) {
-            if(grid[i][j] == 0) continue;
-            if(vis[i][j]) continue;
-            vector<vector<int>> temp  = grid;
-            int warna = grid[i][j];
-            int totalKlik = 0;
-            klik(i, j, warna, temp, vis, totalKlik);
-            if(totalKlik>1) {
-                ans = max(ans, totalKlik*(totalKlik-1) + coba(temp));
-            }
-        }
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      if (grid[i][j] == 0) continue;
+      if (vis[i][j]) continue;
+      vector<vector<int>> temp = grid;
+      int warna = grid[i][j];
+      int totalKlik = 0;
+      klik(i, j, warna, temp, vis, totalKlik);
+      if (totalKlik > 1) {
+        ans = max(ans, totalKlik * (totalKlik - 1) + coba(temp));
+      }
     }
-    return ans; 
+  }
+  return ans;
 }
 
 int32_t main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    cin >> n >> m;
-    vector<vector<int>> grid(n, vector<int>(m));
-    for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) cin >> grid[i][j];
-    }
-    int ans = coba(grid);
-    cout << ans << endl;
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cin >> n >> m;
+  vector<vector<int>> grid(n, vector<int>(m));
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) cin >> grid[i][j];
+  }
+  int ans = coba(grid);
+  cout << ans << endl;
 }
 ```
 </details>
@@ -104,76 +105,77 @@ using namespace std;
 
 int n, m;
 
-int dr[4] = {0,0,1,-1};
-int dc[4] = {1,-1,0,0};
+int dr[4] = {0, 0, 1, -1};
+int dc[4] = {1, -1, 0, 0};
 
-bool inside(int x, int y) {
-    return x>=0&&x<n&&y>=0&&y<m;
-}
+bool inside(int x, int y) { return x >= 0 && x < n && y >= 0 && y < m; }
 
 int coba(vector<vector<int>> grid) {
-    vector<vector<int>> temp = grid;
-    vector<vector<bool>> vis(n, vector<bool>(m, 0));
-    int ans = 0;
+  vector<vector<int>> temp = grid;
+  vector<vector<bool>> vis(n, vector<bool>(m, 0));
+  int ans = 0;
 
-    //runtuh
-    for(int j=0;j<m;j++) {
-        int prev = -1; 
-        for(int i=n-1;i>=0;i--){
-            if(prev == -1 && grid[i][j] == 0 ) prev = i;
-            else if(prev != -1 && grid[i][j] != 0) {
-                grid[prev][j] = grid[i][j];
-                grid[i][j] = 0;
-                prev--;
-            }
-        }
+  // runtuh
+  for (int j = 0; j < m; j++) {
+    int prev = -1;
+    for (int i = n - 1; i >= 0; i--) {
+      if (prev == -1 && grid[i][j] == 0)
+        prev = i;
+      else if (prev != -1 && grid[i][j] != 0) {
+        grid[prev][j] = grid[i][j];
+        grid[i][j] = 0;
+        prev--;
+      }
     }
+  }
 
-    for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) {
-            if(vis[i][j]) continue;
-            if(grid[i][j]==0) continue;
-            temp = grid; // copy grid to temp
-            int angka = grid[i][j];
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      if (vis[i][j]) continue;
+      if (grid[i][j] == 0) continue;
+      temp = grid;  // copy grid to temp
+      int angka = grid[i][j];
 
-            //bfs
-            queue<pair<int,int>> q;
-            q.push({i,j});
-            int totalKlik = 0;
-            while(!q.empty() ) { 
-                pair<int,int> u = q.front(); q.pop();
-                int x = u.first, y=u.second;
-                if(vis[x][y]) continue;
-                if(temp[x][y] != angka) continue;
-                vis[x][y] = 1;
-                temp[x][y] = 0;
-                totalKlik++;
-                for(int l=0;l<4;l++) {
-                    int tr = x + dc[l], tc = y+dr[l];
-                    if(!inside(tr,tc)) continue;
-                    if(temp[tr][tc] != angka) continue;
-                    if(vis[tr][tc]) continue;
-                    q.push({tr,tc});
-                }
-            }
-            // minimal bola harus lebih dari satu
-            if(totalKlik>1) {
-                ans = max(ans, totalKlik*(totalKlik-1) + coba(temp));
-            }
+      // bfs
+      queue<pair<int, int>> q;
+      q.push({i, j});
+      int totalKlik = 0;
+      while (!q.empty()) {
+        pair<int, int> u = q.front();
+        q.pop();
+        int x = u.first, y = u.second;
+        if (vis[x][y]) continue;
+        if (temp[x][y] != angka) continue;
+        vis[x][y] = 1;
+        temp[x][y] = 0;
+        totalKlik++;
+        for (int l = 0; l < 4; l++) {
+          int tr = x + dc[l], tc = y + dr[l];
+          if (!inside(tr, tc)) continue;
+          if (temp[tr][tc] != angka) continue;
+          if (vis[tr][tc]) continue;
+          q.push({tr, tc});
         }
+      }
+      // minimal bola harus lebih dari satu
+      if (totalKlik > 1) {
+        ans = max(ans, totalKlik * (totalKlik - 1) + coba(temp));
+      }
     }
-    return ans;
+  }
+  return ans;
 }
 
 int32_t main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    cin >> n >> m;
-    vector<vector<int>> grid(n, vector<int>(m));
-    for(int i=0;i<n;i++) {
-        for(int j=0;j<m;j++) cin >> grid[i][j];
-    }
-    int ans = coba(grid);
-    cout << ans << endl;
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cin >> n >> m;
+  vector<vector<int>> grid(n, vector<int>(m));
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) cin >> grid[i][j];
+  }
+  int ans = coba(grid);
+  cout << ans << endl;
 }
 ```
 </details>

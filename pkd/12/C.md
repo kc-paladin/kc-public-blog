@@ -72,8 +72,7 @@ int main() {
     for (int j = i + 1; j <= N - 1; j++) {
       for (int k = j + 1; k <= N; k++) {
         double area = abs((x[i] * y[j] + x[j] * y[k] + x[k] * y[i]) -
-                          (x[j] * y[i] + x[k] * y[j] + x[i] * y[k])) /
-                      2;
+                          (x[j] * y[i] + x[k] * y[j] + x[i] * y[k])) / 2;
         if (area > 0) {
           if (area < ans) {
             ans = area;

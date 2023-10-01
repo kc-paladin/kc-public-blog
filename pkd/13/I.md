@@ -22,31 +22,32 @@ Solusi binary search ini dijamin memenuhi syarat tidak boleh menebak lebih dari 
 
 using namespace std;
 
-int ask(int x){
-    cout << x << endl;                  //tebak angka x
-    string s; getline(cin, s);
-    if(s == "terlalu kecil") return 1;    
-    if(s == "terlalu besar") return 2;
-    return 3;
+int ask(int x) {
+  cout << x << endl;  // tebak angka x
+  string s;
+  getline(cin, s);
+  if (s == "terlalu kecil") return 1;
+  if (s == "terlalu besar") return 2;
+  return 3;
 }
 
-int main(){
-    int l, r; cin >> l >> r;
-    cin.ignore();               //abaikan baris kosong yang ada setelah input A dan B (l dan r)
-
-    while(l <= r){
-        int mid = (l + r)/2;
-        int tmp = ask(mid);
-        if(tmp == 1){           //jika jawaban juri "terlalu kecil"
-            l = mid + 1;
-        } else if(tmp == 2){    //jika jawaban juri "terlalu besar"
-            r = mid - 1;
-        } else{                 //jika jawaban juri "selamat"
-            break;
-        }
+int main() {
+  int l, r;
+  cin >> l >> r;
+  cin.ignore();  // abaikan baris kosong yang ada setelah input A dan B (l dan r)
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    int tmp = ask(mid);
+    if (tmp == 1) {  // jika jawaban juri "terlalu kecil"
+      l = mid + 1;
+    } else if (tmp == 2) {  // jika jawaban juri "terlalu besar"
+      r = mid - 1;
+    } else {  // jika jawaban juri "selamat"
+      break;
     }
+  }
 
-    return 0;
+  return 0;
 }
 ```
 </details>
